@@ -42,7 +42,7 @@ const FilmCards: React.FC = (): JSX.Element => {
 		)
 	}
 
-	if (!isLoading && !data?.items) {
+	if (!isLoading && !data?.items.length) {
 		return (
 			<StyledWrongText data-testid="placeholder">
 				There are no such videos or or the maximum number of api requests has been exceeded
