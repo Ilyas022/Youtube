@@ -1,0 +1,507 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1710230581247" clover="3.2.0">
+  <project timestamp="1710230581247" name="All files">
+    <metrics statements="270" coveredstatements="238" conditionals="63" coveredconditionals="49" methods="103" coveredmethods="83" elements="436" coveredelements="370" complexity="0" loc="270" ncloc="270" packages="21" files="56" classes="56"/>
+    <package name="src">
+      <metrics statements="14" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="0"/>
+      <file name="App.tsx" path="D:\frontend\Hiring\Youtube\src\App.tsx">
+        <metrics statements="3" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+      </file>
+      <file name="declarations.d.ts" path="D:\frontend\Hiring\Youtube\src\declarations.d.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="global.styles.ts" path="D:\frontend\Hiring\Youtube\src\global.styles.ts">
+        <metrics statements="10" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="0"/>
+        <line num="7" count="12" type="stmt"/>
+        <line num="16" count="12" type="stmt"/>
+        <line num="25" count="12" type="stmt"/>
+        <line num="75" count="0" type="stmt"/>
+        <line num="94" count="0" type="stmt"/>
+        <line num="95" count="0" type="stmt"/>
+        <line num="109" count="12" type="stmt"/>
+        <line num="127" count="0" type="stmt"/>
+        <line num="141" count="12" type="stmt"/>
+        <line num="155" count="12" type="stmt"/>
+      </file>
+      <file name="index.tsx" path="D:\frontend\Hiring\Youtube\src\index.tsx">
+        <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="7" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.assets.fonts">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="fonts.d.ts" path="D:\frontend\Hiring\Youtube\src\assets\fonts\fonts.d.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="src.components.Buttons.BurgerButton">
+      <metrics statements="6" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
+      <file name="BurgerButton.styles.ts" path="D:\frontend\Hiring\Youtube\src\components\Buttons\BurgerButton\BurgerButton.styles.ts">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="80" count="1" type="stmt"/>
+        <line num="91" count="1" type="stmt"/>
+        <line num="115" count="1" type="stmt"/>
+      </file>
+      <file name="BurgerButton.tsx" path="D:\frontend\Hiring\Youtube\src\components\Buttons\BurgerButton\BurgerButton.tsx">
+        <metrics statements="3" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.Buttons.Button">
+      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <file name="Button.styles.ts" path="D:\frontend\Hiring\Youtube\src\components\Buttons\Button\Button.styles.ts">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="4" count="2" type="stmt"/>
+      </file>
+      <file name="Button.tsx" path="D:\frontend\Hiring\Youtube\src\components\Buttons\Button\Button.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="8" count="2" type="stmt"/>
+        <line num="9" count="12" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.CategoryBar">
+      <metrics statements="14" coveredstatements="14" conditionals="4" coveredconditionals="4" methods="5" coveredmethods="5"/>
+      <file name="CategoryBar.styles.ts" path="D:\frontend\Hiring\Youtube\src\components\CategoryBar\CategoryBar.styles.ts">
+        <metrics statements="5" coveredstatements="5" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="2"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="9" count="2" type="stmt"/>
+        <line num="19" count="18" type="cond" truecount="2" falsecount="0"/>
+        <line num="20" count="18" type="cond" truecount="2" falsecount="0"/>
+        <line num="31" count="2" type="stmt"/>
+      </file>
+      <file name="CategoryBar.tsx" path="D:\frontend\Hiring\Youtube\src\components\CategoryBar\CategoryBar.tsx">
+        <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+        <line num="8" count="2" type="stmt"/>
+        <line num="9" count="3" type="stmt"/>
+        <line num="10" count="3" type="stmt"/>
+        <line num="12" count="3" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="18" count="3" type="stmt"/>
+        <line num="22" count="18" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.ErrorBoundary">
+      <metrics statements="9" coveredstatements="7" conditionals="2" coveredconditionals="2" methods="4" coveredmethods="3"/>
+      <file name="ErrorBoundary.tsx" path="D:\frontend\Hiring\Youtube\src\components\ErrorBoundary\ErrorBoundary.tsx">
+        <metrics statements="9" coveredstatements="7" conditionals="2" coveredconditionals="2" methods="4" coveredmethods="3"/>
+        <line num="14" count="12" type="stmt"/>
+        <line num="15" count="12" type="stmt"/>
+        <line num="19" count="4" type="stmt"/>
+        <line num="20" count="4" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="29" count="33" type="cond" truecount="2" falsecount="0"/>
+        <line num="30" count="4" type="stmt"/>
+        <line num="33" count="29" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.FilmCard">
+      <metrics statements="12" coveredstatements="12" conditionals="2" coveredconditionals="2" methods="4" coveredmethods="4"/>
+      <file name="FilmCard.styles.ts" path="D:\frontend\Hiring\Youtube\src\components\FilmCard\FilmCard.styles.ts">
+        <metrics statements="10" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="19" count="2" type="stmt"/>
+        <line num="37" count="2" type="stmt"/>
+        <line num="44" count="14" type="stmt"/>
+        <line num="56" count="2" type="stmt"/>
+        <line num="60" count="14" type="stmt"/>
+        <line num="67" count="2" type="stmt"/>
+        <line num="76" count="2" type="stmt"/>
+        <line num="82" count="14" type="stmt"/>
+        <line num="85" count="2" type="stmt"/>
+      </file>
+      <file name="FilmCard.tsx" path="D:\frontend\Hiring\Youtube\src\components\FilmCard\FilmCard.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="21" count="2" type="stmt"/>
+        <line num="28" count="14" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.FilmCards">
+      <metrics statements="23" coveredstatements="23" conditionals="14" coveredconditionals="14" methods="7" coveredmethods="7"/>
+      <file name="FilmCards.styles.ts" path="D:\frontend\Hiring\Youtube\src\components\FilmCards\FilmCards.styles.ts">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="4" count="3" type="stmt"/>
+        <line num="27" count="3" type="stmt"/>
+        <line num="32" count="3" type="stmt"/>
+      </file>
+      <file name="FilmCards.tsx" path="D:\frontend\Hiring\Youtube\src\components\FilmCards\FilmCards.tsx">
+        <metrics statements="20" coveredstatements="20" conditionals="14" coveredconditionals="14" methods="7" coveredmethods="7"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="14" count="41" type="stmt"/>
+        <line num="16" count="23" type="stmt"/>
+        <line num="17" count="23" type="stmt"/>
+        <line num="19" count="23" type="stmt"/>
+        <line num="21" count="23" type="stmt"/>
+        <line num="601" count="23" type="stmt"/>
+        <line num="602" count="2" type="stmt"/>
+        <line num="603" count="2" type="stmt"/>
+        <line num="604" count="2" type="stmt"/>
+        <line num="607" count="23" type="stmt"/>
+        <line num="609" count="1" type="cond" truecount="2" falsecount="0"/>
+        <line num="613" count="23" type="cond" truecount="2" falsecount="0"/>
+        <line num="614" count="12" type="stmt"/>
+        <line num="625" count="11" type="cond" truecount="4" falsecount="0"/>
+        <line num="626" count="1" type="stmt"/>
+        <line num="633" count="10" type="stmt"/>
+        <line num="638" count="11" type="stmt"/>
+        <line num="645" count="2" type="stmt"/>
+        <line num="663" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.Footer">
+      <metrics statements="12" coveredstatements="12" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
+      <file name="Footer.styles.ts" path="D:\frontend\Hiring\Youtube\src\components\Footer\Footer.styles.ts">
+        <metrics statements="10" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="27" count="1" type="stmt"/>
+        <line num="54" count="1" type="stmt"/>
+        <line num="55" count="2" type="stmt"/>
+        <line num="71" count="1" type="stmt"/>
+        <line num="72" count="1" type="stmt"/>
+        <line num="88" count="1" type="stmt"/>
+        <line num="92" count="1" type="stmt"/>
+        <line num="109" count="1" type="stmt"/>
+      </file>
+      <file name="Footer.tsx" path="D:\frontend\Hiring\Youtube\src\components\Footer\Footer.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="16" count="1" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.Header">
+      <metrics statements="8" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="2"/>
+      <file name="Header.styles.ts" path="D:\frontend\Hiring\Youtube\src\components\Header\Header.styles.ts">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="24" count="1" type="stmt"/>
+        <line num="34" count="1" type="stmt"/>
+      </file>
+      <file name="Header.tsx" path="D:\frontend\Hiring\Youtube\src\components\Header\Header.tsx">
+        <metrics statements="4" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="1"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.Logo">
+      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="Logo.styles.ts" path="D:\frontend\Hiring\Youtube\src\components\Logo\Logo.styles.ts">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="4" count="1" type="stmt"/>
+      </file>
+      <file name="Logo.tsx" path="D:\frontend\Hiring\Youtube\src\components\Logo\Logo.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.Menu">
+      <metrics statements="10" coveredstatements="8" conditionals="4" coveredconditionals="2" methods="4" coveredmethods="4"/>
+      <file name="PhoneMenu.styles.ts" path="D:\frontend\Hiring\Youtube\src\components\Menu\PhoneMenu.styles.ts">
+        <metrics statements="2" coveredstatements="2" conditionals="2" coveredconditionals="1" methods="1" coveredmethods="1"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="25" count="1" type="cond" truecount="1" falsecount="1"/>
+      </file>
+      <file name="PhoneMenu.tsx" path="D:\frontend\Hiring\Youtube\src\components\Menu\PhoneMenu.tsx">
+        <metrics statements="8" coveredstatements="6" conditionals="2" coveredconditionals="1" methods="3" coveredmethods="3"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="13" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="21" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.PopUp">
+      <metrics statements="12" coveredstatements="12" conditionals="2" coveredconditionals="1" methods="4" coveredmethods="4"/>
+      <file name="PopUp.styles.ts" path="D:\frontend\Hiring\Youtube\src\components\PopUp\PopUp.styles.ts">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="17" count="2" type="stmt"/>
+        <line num="38" count="2" type="stmt"/>
+      </file>
+      <file name="PopUp.tsx" path="D:\frontend\Hiring\Youtube\src\components\PopUp\PopUp.tsx">
+        <metrics statements="9" coveredstatements="9" conditionals="2" coveredconditionals="1" methods="4" coveredmethods="4"/>
+        <line num="12" count="2" type="stmt"/>
+        <line num="13" count="4" type="stmt"/>
+        <line num="14" count="4" type="stmt"/>
+        <line num="16" count="4" type="stmt"/>
+        <line num="17" count="2" type="cond" truecount="1" falsecount="1"/>
+        <line num="20" count="4" type="stmt"/>
+        <line num="21" count="4" type="stmt"/>
+        <line num="23" count="4" type="stmt"/>
+        <line num="26" count="4" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.SearchBar">
+      <metrics statements="37" coveredstatements="34" conditionals="7" coveredconditionals="3" methods="11" coveredmethods="8"/>
+      <file name="SearchBar.styles.ts" path="D:\frontend\Hiring\Youtube\src\components\SearchBar\SearchBar.styles.ts">
+        <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="11" count="2" type="stmt"/>
+        <line num="19" count="2" type="stmt"/>
+        <line num="26" count="24" type="stmt"/>
+        <line num="38" count="2" type="stmt"/>
+        <line num="39" count="24" type="stmt"/>
+        <line num="48" count="24" type="stmt"/>
+        <line num="52" count="2" type="stmt"/>
+      </file>
+      <file name="SearchBar.tsx" path="D:\frontend\Hiring\Youtube\src\components\SearchBar\SearchBar.tsx">
+        <metrics statements="29" coveredstatements="26" conditionals="7" coveredconditionals="3" methods="8" coveredmethods="5"/>
+        <line num="22" count="2" type="stmt"/>
+        <line num="23" count="26" type="stmt"/>
+        <line num="24" count="26" type="stmt"/>
+        <line num="25" count="26" type="stmt"/>
+        <line num="26" count="26" type="stmt"/>
+        <line num="27" count="26" type="stmt"/>
+        <line num="29" count="26" type="stmt"/>
+        <line num="30" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="34" count="0" type="stmt"/>
+        <line num="38" count="26" type="stmt"/>
+        <line num="39" count="26" type="stmt"/>
+        <line num="42" count="26" type="stmt"/>
+        <line num="44" count="26" type="stmt"/>
+        <line num="45" count="2" type="stmt"/>
+        <line num="48" count="26" type="stmt"/>
+        <line num="49" count="2" type="stmt"/>
+        <line num="50" count="2" type="stmt"/>
+        <line num="51" count="2" type="stmt"/>
+        <line num="52" count="2" type="stmt"/>
+        <line num="53" count="2" type="stmt"/>
+        <line num="54" count="2" type="stmt"/>
+        <line num="57" count="26" type="stmt"/>
+        <line num="66" count="0" type="stmt"/>
+        <line num="68" count="4" type="stmt"/>
+        <line num="79" count="1" type="stmt"/>
+        <line num="80" count="1" type="stmt"/>
+        <line num="81" count="1" type="stmt"/>
+        <line num="82" count="1" type="stmt"/>
+        <line num="83" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.SearchHints">
+      <metrics statements="6" coveredstatements="6" conditionals="4" coveredconditionals="4" methods="3" coveredmethods="3"/>
+      <file name="SearchHints.styles.ts" path="D:\frontend\Hiring\Youtube\src\components\SearchHints\SearchHints.styles.ts">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="12" count="3" type="stmt"/>
+      </file>
+      <file name="SearchHints.tsx" path="D:\frontend\Hiring\Youtube\src\components\SearchHints\SearchHints.tsx">
+        <metrics statements="4" coveredstatements="4" conditionals="4" coveredconditionals="4" methods="3" coveredmethods="3"/>
+        <line num="9" count="3" type="stmt"/>
+        <line num="14" count="6" type="stmt"/>
+        <line num="21" count="5" type="stmt"/>
+        <line num="22" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.ThemeToggler">
+      <metrics statements="12" coveredstatements="12" conditionals="4" coveredconditionals="4" methods="3" coveredmethods="3"/>
+      <file name="ThemeToggler.styles.ts" path="D:\frontend\Hiring\Youtube\src\components\ThemeToggler\ThemeToggler.styles.ts">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="10" count="2" type="stmt"/>
+        <line num="16" count="2" type="stmt"/>
+        <line num="28" count="2" type="stmt"/>
+      </file>
+      <file name="ThemeToggler.tsx" path="D:\frontend\Hiring\Youtube\src\components\ThemeToggler\ThemeToggler.tsx">
+        <metrics statements="8" coveredstatements="8" conditionals="4" coveredconditionals="4" methods="3" coveredmethods="3"/>
+        <line num="14" count="2" type="stmt"/>
+        <line num="16" count="5" type="stmt"/>
+        <line num="17" count="12" type="stmt"/>
+        <line num="19" count="5" type="cond" truecount="2" falsecount="0"/>
+        <line num="21" count="5" type="stmt"/>
+        <line num="22" count="2" type="stmt"/>
+        <line num="23" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="26" count="5" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.icons">
+      <metrics statements="18" coveredstatements="12" conditionals="0" coveredconditionals="0" methods="9" coveredmethods="6"/>
+      <file name="FbIcon.tsx" path="D:\frontend\Hiring\Youtube\src\components\icons\FbIcon.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+      </file>
+      <file name="IgIcon.tsx" path="D:\frontend\Hiring\Youtube\src\components\icons\IgIcon.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+      </file>
+      <file name="InIcon.tsx" path="D:\frontend\Hiring\Youtube\src\components\icons\InIcon.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+      </file>
+      <file name="MoonIcon.tsx" path="D:\frontend\Hiring\Youtube\src\components\icons\MoonIcon.tsx">
+        <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="0" type="stmt"/>
+        <line num="2" count="0" type="stmt"/>
+      </file>
+      <file name="SearchIcon.tsx" path="D:\frontend\Hiring\Youtube\src\components\icons\SearchIcon.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="2" count="24" type="stmt"/>
+      </file>
+      <file name="SunIcon.tsx" path="D:\frontend\Hiring\Youtube\src\components\icons\SunIcon.tsx">
+        <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="0" type="stmt"/>
+        <line num="2" count="0" type="stmt"/>
+      </file>
+      <file name="TwIcon.tsx" path="D:\frontend\Hiring\Youtube\src\components\icons\TwIcon.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+      </file>
+      <file name="UserIcon.tsx" path="D:\frontend\Hiring\Youtube\src\components\icons\UserIcon.tsx">
+        <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="0" type="stmt"/>
+        <line num="2" count="0" type="stmt"/>
+      </file>
+      <file name="YtIcon.tsx" path="D:\frontend\Hiring\Youtube\src\components\icons\YtIcon.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="2" count="15" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.skeletons">
+      <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="FilmCardSkeleton.styles.ts" path="D:\frontend\Hiring\Youtube\src\components\skeletons\FilmCardSkeleton.styles.ts">
+        <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="12" count="2" type="stmt"/>
+        <line num="20" count="2" type="stmt"/>
+        <line num="30" count="2" type="stmt"/>
+        <line num="35" count="2" type="stmt"/>
+        <line num="49" count="2" type="stmt"/>
+        <line num="59" count="2" type="stmt"/>
+      </file>
+      <file name="FilmCardSkeleton.tsx" path="D:\frontend\Hiring\Youtube\src\components\skeletons\FilmCardSkeleton.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="10" count="2" type="stmt"/>
+        <line num="11" count="61" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.hooks">
+      <metrics statements="30" coveredstatements="25" conditionals="5" coveredconditionals="1" methods="13" coveredmethods="11"/>
+      <file name="useActions.ts" path="D:\frontend\Hiring\Youtube\src\hooks\useActions.ts">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="8" count="4" type="stmt"/>
+        <line num="9" count="34" type="stmt"/>
+        <line num="11" count="34" type="stmt"/>
+      </file>
+      <file name="useDebounce.ts" path="D:\frontend\Hiring\Youtube\src\hooks\useDebounce.ts">
+        <metrics statements="7" coveredstatements="6" conditionals="1" coveredconditionals="1" methods="4" coveredmethods="3"/>
+        <line num="3" count="2" type="cond" truecount="1" falsecount="0"/>
+        <line num="4" count="26" type="stmt"/>
+        <line num="6" count="26" type="stmt"/>
+        <line num="7" count="10" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="10" count="10" type="stmt"/>
+        <line num="13" count="26" type="stmt"/>
+      </file>
+      <file name="useOnClickOutside.ts" path="D:\frontend\Hiring\Youtube\src\hooks\useOnClickOutside.ts">
+        <metrics statements="11" coveredstatements="7" conditionals="4" coveredconditionals="0" methods="4" coveredmethods="3"/>
+        <line num="9" count="26" type="stmt"/>
+        <line num="10" count="24" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="14" count="0" type="cond" truecount="0" falsecount="4"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="21" count="24" type="stmt"/>
+        <line num="22" count="24" type="stmt"/>
+        <line num="24" count="24" type="stmt"/>
+        <line num="25" count="24" type="stmt"/>
+        <line num="26" count="24" type="stmt"/>
+      </file>
+      <file name="useScrollLock.ts" path="D:\frontend\Hiring\Youtube\src\hooks\useScrollLock.ts">
+        <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="4" count="5" type="stmt"/>
+        <line num="5" count="4" type="stmt"/>
+        <line num="6" count="4" type="stmt"/>
+        <line num="9" count="5" type="stmt"/>
+        <line num="10" count="5" type="stmt"/>
+        <line num="11" count="5" type="stmt"/>
+        <line num="14" count="5" type="stmt"/>
+      </file>
+      <file name="useTypedSelector.ts" path="D:\frontend\Hiring\Youtube\src\hooks\useTypedSelector.ts">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="4" count="3" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.store">
+      <metrics statements="29" coveredstatements="25" conditionals="12" coveredconditionals="9" methods="14" coveredmethods="12"/>
+      <file name="api.ts" path="D:\frontend\Hiring\Youtube\src\store\api.ts">
+        <metrics statements="13" coveredstatements="9" conditionals="12" coveredconditionals="9" methods="8" coveredmethods="6"/>
+        <line num="4" count="11" type="stmt"/>
+        <line num="7" count="11" type="stmt"/>
+        <line num="10" count="7" type="stmt"/>
+        <line num="28" count="43" type="stmt"/>
+        <line num="31" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="32" count="0" type="stmt"/>
+        <line num="33" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="34" count="0" type="stmt"/>
+        <line num="37" count="0" type="stmt"/>
+        <line num="38" count="1" type="stmt"/>
+        <line num="41" count="7" type="stmt"/>
+        <line num="46" count="7" type="stmt"/>
+        <line num="60" count="11" type="stmt"/>
+      </file>
+      <file name="filterSlice.ts" path="D:\frontend\Hiring\Youtube\src\store\filterSlice.ts">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="8" count="11" type="stmt"/>
+        <line num="13" count="11" type="stmt"/>
+        <line num="18" count="3" type="stmt"/>
+        <line num="21" count="1" type="stmt"/>
+      </file>
+      <file name="rootActions.ts" path="D:\frontend\Hiring\Youtube\src\store\rootActions.ts">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="4" count="4" type="stmt"/>
+      </file>
+      <file name="store.ts" path="D:\frontend\Hiring\Youtube\src\store\store.ts">
+        <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+        <line num="17" count="11" type="stmt"/>
+        <line num="23" count="11" type="stmt"/>
+        <line num="25" count="11" type="stmt"/>
+        <line num="31" count="11" type="stmt"/>
+        <line num="38" count="11" type="stmt"/>
+        <line num="44" count="11" type="stmt"/>
+        <line num="50" count="27" type="stmt"/>
+        <line num="53" count="27" type="stmt"/>
+      </file>
+      <file name="themeSlice.ts" path="D:\frontend\Hiring\Youtube\src\store\themeSlice.ts">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="12" count="11" type="stmt"/>
+        <line num="16" count="11" type="stmt"/>
+        <line num="21" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.utils">
+      <metrics statements="3" coveredstatements="3" conditionals="3" coveredconditionals="3" methods="2" coveredmethods="2"/>
+      <file name="interfaces.ts" path="D:\frontend\Hiring\Youtube\src\utils\interfaces.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="mockValues.ts" path="D:\frontend\Hiring\Youtube\src\utils\mockValues.ts">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="2" type="stmt"/>
+      </file>
+      <file name="testWrapper.tsx" path="D:\frontend\Hiring\Youtube\src\utils\testWrapper.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="3" coveredconditionals="3" methods="2" coveredmethods="2"/>
+        <line num="23" count="27" type="stmt"/>
+        <line num="29" count="27" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>

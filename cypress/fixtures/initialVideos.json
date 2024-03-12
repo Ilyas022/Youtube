@@ -1,0 +1,556 @@
+{
+	"kind": "youtube#searchListResponse",
+	"etag": "igzxE_-RKbegbg3p_DKbaaRIrNA",
+	"nextPageToken": "CBAQAA",
+	"regionCode": "BY",
+	"pageInfo": {
+		"totalResults": 1000000,
+		"resultsPerPage": 16
+	},
+	"items": [
+		{
+			"kind": "youtube#searchResult",
+			"etag": "KjIB3nG3hnuNSCGd_GdKA-GIrOU",
+			"id": {
+				"kind": "youtube#video",
+				"videoId": "4c_ADqshdSA"
+			},
+			"snippet": {
+				"publishedAt": "2017-04-29T07:44:26Z",
+				"channelId": "UC16niRr50-MSBwiO3YDb3RA",
+				"title": "Terracotta Army: The greatest archaeological find of the 20th century - BBC News",
+				"description": "In March 1974, Chinese farmers digging a well unearthed the greatest archaeological find of the century - the buried Terracotta ...",
+				"thumbnails": {
+					"default": {
+						"url": "https://i.ytimg.com/vi/4c_ADqshdSA/default.jpg",
+						"width": 120,
+						"height": 90
+					},
+					"medium": {
+						"url": "https://i.ytimg.com/vi/4c_ADqshdSA/mqdefault.jpg",
+						"width": 320,
+						"height": 180
+					},
+					"high": {
+						"url": "https://i.ytimg.com/vi/4c_ADqshdSA/hqdefault.jpg",
+						"width": 480,
+						"height": 360
+					}
+				},
+				"channelTitle": "BBC News",
+				"liveBroadcastContent": "none",
+				"publishTime": "2017-04-29T07:44:26Z"
+			}
+		},
+		{
+			"kind": "youtube#searchResult",
+			"etag": "hhlm5PU2GHYU8rkb1sc6038pO9k",
+			"id": {
+				"kind": "youtube#video",
+				"videoId": "dcBXmj1nMTQ"
+			},
+			"snippet": {
+				"publishedAt": "2019-12-01T13:00:07Z",
+				"channelId": "UCNye-wNBqNL5ZzHSJj3l8Bg",
+				"title": "What is Climate Change? | Start Here",
+				"description": "The hard facts about global warming - a defining issue of our time. Climate change is happening now, and even world leaders ...",
+				"thumbnails": {
+					"default": {
+						"url": "https://i.ytimg.com/vi/dcBXmj1nMTQ/default.jpg",
+						"width": 120,
+						"height": 90
+					},
+					"medium": {
+						"url": "https://i.ytimg.com/vi/dcBXmj1nMTQ/mqdefault.jpg",
+						"width": 320,
+						"height": 180
+					},
+					"high": {
+						"url": "https://i.ytimg.com/vi/dcBXmj1nMTQ/hqdefault.jpg",
+						"width": 480,
+						"height": 360
+					}
+				},
+				"channelTitle": "Al Jazeera English",
+				"liveBroadcastContent": "none",
+				"publishTime": "2019-12-01T13:00:07Z"
+			}
+		},
+		{
+			"kind": "youtube#searchResult",
+			"etag": "-CuPWBL7PFdeoQFDSdhX3i_VTTo",
+			"id": {
+				"kind": "youtube#video",
+				"videoId": "LuBagc7uk-k"
+			},
+			"snippet": {
+				"publishedAt": "2022-06-06T16:00:09Z",
+				"channelId": "UChDKyKQ59fYz3JO2fl0Z6sg",
+				"title": "Want To Lose Weight? Doctors Say It’s Time To Stop Counting Calories",
+				"description": "A new report by a group of obesity doctors and scientists found that telling people to eat less could actually be causing more harm ...",
+				"thumbnails": {
+					"default": {
+						"url": "https://i.ytimg.com/vi/LuBagc7uk-k/default.jpg",
+						"width": 120,
+						"height": 90
+					},
+					"medium": {
+						"url": "https://i.ytimg.com/vi/LuBagc7uk-k/mqdefault.jpg",
+						"width": 320,
+						"height": 180
+					},
+					"high": {
+						"url": "https://i.ytimg.com/vi/LuBagc7uk-k/hqdefault.jpg",
+						"width": 480,
+						"height": 360
+					}
+				},
+				"channelTitle": "TODAY",
+				"liveBroadcastContent": "none",
+				"publishTime": "2022-06-06T16:00:09Z"
+			}
+		},
+		{
+			"kind": "youtube#searchResult",
+			"etag": "BxC3Zp4dmuGOv5Q535-dOcl_uQo",
+			"id": {
+				"kind": "youtube#video",
+				"videoId": "pldMZLL_HZk"
+			},
+			"snippet": {
+				"publishedAt": "2022-07-29T23:13:00Z",
+				"channelId": "UC6ZFN9Tx6xh-skXCuRHCDpQ",
+				"title": "Manufacturers use &#39;shrinkflation&#39; to pass costs on to consumers",
+				"description": "With inflation at a 40-year high in the U.S., we are all spending more when we go to the store. But there is another dimension of ...",
+				"thumbnails": {
+					"default": {
+						"url": "https://i.ytimg.com/vi/pldMZLL_HZk/default.jpg",
+						"width": 120,
+						"height": 90
+					},
+					"medium": {
+						"url": "https://i.ytimg.com/vi/pldMZLL_HZk/mqdefault.jpg",
+						"width": 320,
+						"height": 180
+					},
+					"high": {
+						"url": "https://i.ytimg.com/vi/pldMZLL_HZk/hqdefault.jpg",
+						"width": 480,
+						"height": 360
+					}
+				},
+				"channelTitle": "PBS NewsHour",
+				"liveBroadcastContent": "none",
+				"publishTime": "2022-07-29T23:13:00Z"
+			}
+		},
+		{
+			"kind": "youtube#searchResult",
+			"etag": "VcVALqm2Di50kWwbxdpxcKWPbtk",
+			"id": {
+				"kind": "youtube#video",
+				"videoId": "AYc_eqJ7pYM"
+			},
+			"snippet": {
+				"publishedAt": "2017-01-22T18:44:49Z",
+				"channelId": "UChDKyKQ59fYz3JO2fl0Z6sg",
+				"title": "This Man Catches Marathon Cheaters And Calls Them Out On His Blog | TODAY",
+				"description": "Marathon runners who cheat have become more sophisticated in their methods – they don't need to hop on a bus to stay ahead of ...",
+				"thumbnails": {
+					"default": {
+						"url": "https://i.ytimg.com/vi/AYc_eqJ7pYM/default.jpg",
+						"width": 120,
+						"height": 90
+					},
+					"medium": {
+						"url": "https://i.ytimg.com/vi/AYc_eqJ7pYM/mqdefault.jpg",
+						"width": 320,
+						"height": 180
+					},
+					"high": {
+						"url": "https://i.ytimg.com/vi/AYc_eqJ7pYM/hqdefault.jpg",
+						"width": 480,
+						"height": 360
+					}
+				},
+				"channelTitle": "TODAY",
+				"liveBroadcastContent": "none",
+				"publishTime": "2017-01-22T18:44:49Z"
+			}
+		},
+		{
+			"kind": "youtube#searchResult",
+			"etag": "DalEMV-Z2pAD05Q7tgwphwfPHZ0",
+			"id": {
+				"kind": "youtube#video",
+				"videoId": "iiuKPtvKZcM"
+			},
+			"snippet": {
+				"publishedAt": "2022-07-30T02:30:11Z",
+				"channelId": "UCeY0bbntWzzVIaj2z3QigXg",
+				"title": "Growing Number Of Americans Questioning The Value Of College Degree",
+				"description": "With inflation hitting American pockets hard, and tuition costs rising, many students are rethinking higher education. NBC News' ...",
+				"thumbnails": {
+					"default": {
+						"url": "https://i.ytimg.com/vi/iiuKPtvKZcM/default.jpg",
+						"width": 120,
+						"height": 90
+					},
+					"medium": {
+						"url": "https://i.ytimg.com/vi/iiuKPtvKZcM/mqdefault.jpg",
+						"width": 320,
+						"height": 180
+					},
+					"high": {
+						"url": "https://i.ytimg.com/vi/iiuKPtvKZcM/hqdefault.jpg",
+						"width": 480,
+						"height": 360
+					}
+				},
+				"channelTitle": "NBC News",
+				"liveBroadcastContent": "none",
+				"publishTime": "2022-07-30T02:30:11Z"
+			}
+		},
+		{
+			"kind": "youtube#searchResult",
+			"etag": "Df8Q0YmoATfXp3B3Gm_nA9FbrPE",
+			"id": {
+				"kind": "youtube#video",
+				"videoId": "tkfq__rdoD0"
+			},
+			"snippet": {
+				"publishedAt": "2021-05-25T16:22:59Z",
+				"channelId": "UCK7tptUDHh-RYDsdxO1-5QQ",
+				"title": "The ‘IKEA Effect:’ Behind the Company’s Unique Business Model | WSJ The Economics Of",
+				"description": "A large part of IKEA's success stems from its policy requiring its customers to build their own furniture. Given how ubiquitous IKEA ...",
+				"thumbnails": {
+					"default": {
+						"url": "https://i.ytimg.com/vi/tkfq__rdoD0/default.jpg",
+						"width": 120,
+						"height": 90
+					},
+					"medium": {
+						"url": "https://i.ytimg.com/vi/tkfq__rdoD0/mqdefault.jpg",
+						"width": 320,
+						"height": 180
+					},
+					"high": {
+						"url": "https://i.ytimg.com/vi/tkfq__rdoD0/hqdefault.jpg",
+						"width": 480,
+						"height": 360
+					}
+				},
+				"channelTitle": "The Wall Street Journal",
+				"liveBroadcastContent": "none",
+				"publishTime": "2021-05-25T16:22:59Z"
+			}
+		},
+		{
+			"kind": "youtube#searchResult",
+			"etag": "IAjlyfX22ewNgAGjdDOCGSTY910",
+			"id": {
+				"kind": "youtube#video",
+				"videoId": "ktbvlsqpgWk"
+			},
+			"snippet": {
+				"publishedAt": "2022-07-28T17:30:05Z",
+				"channelId": "UChDKyKQ59fYz3JO2fl0Z6sg",
+				"title": "Doctor Breaks Down What Women Need To Know About Fibroids",
+				"description": "After sharing her fibroids diagnosis on TODAY, Jill Martin says she was shocked to learn just how many women suffer in silence.",
+				"thumbnails": {
+					"default": {
+						"url": "https://i.ytimg.com/vi/ktbvlsqpgWk/default.jpg",
+						"width": 120,
+						"height": 90
+					},
+					"medium": {
+						"url": "https://i.ytimg.com/vi/ktbvlsqpgWk/mqdefault.jpg",
+						"width": 320,
+						"height": 180
+					},
+					"high": {
+						"url": "https://i.ytimg.com/vi/ktbvlsqpgWk/hqdefault.jpg",
+						"width": 480,
+						"height": 360
+					}
+				},
+				"channelTitle": "TODAY",
+				"liveBroadcastContent": "none",
+				"publishTime": "2022-07-28T17:30:05Z"
+			}
+		},
+		{
+			"kind": "youtube#searchResult",
+			"etag": "DDTN_yAUuXQxkQ_YKK0gL-c_0hI",
+			"id": {
+				"kind": "youtube#video",
+				"videoId": "OZUTrru7b64"
+			},
+			"snippet": {
+				"publishedAt": "2022-06-17T03:45:02Z",
+				"channelId": "UCaXkIU1QidjPwiAYu6GcHjg",
+				"title": "Lawrence: Why Did It Take So Long For Pence To Do The Right Thing?",
+				"description": "After stunning testimony in the third hearing by the January 6th Select Committee revealed that even the people pushing the plan ...",
+				"thumbnails": {
+					"default": {
+						"url": "https://i.ytimg.com/vi/OZUTrru7b64/default.jpg",
+						"width": 120,
+						"height": 90
+					},
+					"medium": {
+						"url": "https://i.ytimg.com/vi/OZUTrru7b64/mqdefault.jpg",
+						"width": 320,
+						"height": 180
+					},
+					"high": {
+						"url": "https://i.ytimg.com/vi/OZUTrru7b64/hqdefault.jpg",
+						"width": 480,
+						"height": 360
+					}
+				},
+				"channelTitle": "MSNBC",
+				"liveBroadcastContent": "none",
+				"publishTime": "2022-06-17T03:45:02Z"
+			}
+		},
+		{
+			"kind": "youtube#searchResult",
+			"etag": "NX0HmO_ZUtB1YSM3iYGXmE9wKzw",
+			"id": {
+				"kind": "youtube#video",
+				"videoId": "qTk-69f64KU"
+			},
+			"snippet": {
+				"publishedAt": "2019-02-27T06:09:48Z",
+				"channelId": "UCvy9bjqfawiaE_CklFSdnzg",
+				"title": "Jordan Peterson Calls Out The &quot;Pseudo-moralistic Stances&quot; Of Activists | Q&amp;A",
+				"description": "Jordan Peterson responds to Australian audience member who asks: \"What answers do you have to the big issues that are facing ...",
+				"thumbnails": {
+					"default": {
+						"url": "https://i.ytimg.com/vi/qTk-69f64KU/default.jpg",
+						"width": 120,
+						"height": 90
+					},
+					"medium": {
+						"url": "https://i.ytimg.com/vi/qTk-69f64KU/mqdefault.jpg",
+						"width": 320,
+						"height": 180
+					},
+					"high": {
+						"url": "https://i.ytimg.com/vi/qTk-69f64KU/hqdefault.jpg",
+						"width": 480,
+						"height": 360
+					}
+				},
+				"channelTitle": "abcqanda",
+				"liveBroadcastContent": "none",
+				"publishTime": "2019-02-27T06:09:48Z"
+			}
+		},
+		{
+			"kind": "youtube#searchResult",
+			"etag": "Ktuqd63KnTIxQOtNbDQzzDYB3mc",
+			"id": {
+				"kind": "youtube#video",
+				"videoId": "CtZ3223ek_Y"
+			},
+			"snippet": {
+				"publishedAt": "2022-05-17T13:41:46Z",
+				"channelId": "UC-SJ6nODDmufqBzPBwCvYvQ",
+				"title": "The Dish: Traditional Chinese topping on fire in U.S.",
+				"description": "Chili crisp has taken the U.S. by storm. Jing Gao created Fly By Jing's version with ingredients exclusively from her hometown of ...",
+				"thumbnails": {
+					"default": {
+						"url": "https://i.ytimg.com/vi/CtZ3223ek_Y/default.jpg",
+						"width": 120,
+						"height": 90
+					},
+					"medium": {
+						"url": "https://i.ytimg.com/vi/CtZ3223ek_Y/mqdefault.jpg",
+						"width": 320,
+						"height": 180
+					},
+					"high": {
+						"url": "https://i.ytimg.com/vi/CtZ3223ek_Y/hqdefault.jpg",
+						"width": 480,
+						"height": 360
+					}
+				},
+				"channelTitle": "CBS Mornings",
+				"liveBroadcastContent": "none",
+				"publishTime": "2022-05-17T13:41:46Z"
+			}
+		},
+		{
+			"kind": "youtube#searchResult",
+			"etag": "XkHReqJRHNhy1CxJFx48kx0HAIs",
+			"id": {
+				"kind": "youtube#video",
+				"videoId": "9vpSz8OXyeI"
+			},
+			"snippet": {
+				"publishedAt": "2022-07-21T16:16:54Z",
+				"channelId": "UCK7tptUDHh-RYDsdxO1-5QQ",
+				"title": "Why Boeing&#39;s 737 MAX 10 May Never Fly Commercially | WSJ",
+				"description": "Boeing's new 737 MAX 10 is facing a regulatory deadline that could force the planemaker to upgrade the jet's cockpit, or consider ...",
+				"thumbnails": {
+					"default": {
+						"url": "https://i.ytimg.com/vi/9vpSz8OXyeI/default.jpg",
+						"width": 120,
+						"height": 90
+					},
+					"medium": {
+						"url": "https://i.ytimg.com/vi/9vpSz8OXyeI/mqdefault.jpg",
+						"width": 320,
+						"height": 180
+					},
+					"high": {
+						"url": "https://i.ytimg.com/vi/9vpSz8OXyeI/hqdefault.jpg",
+						"width": 480,
+						"height": 360
+					}
+				},
+				"channelTitle": "The Wall Street Journal",
+				"liveBroadcastContent": "none",
+				"publishTime": "2022-07-21T16:16:54Z"
+			}
+		},
+		{
+			"kind": "youtube#searchResult",
+			"etag": "4wnldWFD67sv_khR_A4aTlpfnUk",
+			"id": {
+				"kind": "youtube#video",
+				"videoId": "1-OJX1rwnl8"
+			},
+			"snippet": {
+				"publishedAt": "2022-01-12T17:45:50Z",
+				"channelId": "UCK7tptUDHh-RYDsdxO1-5QQ",
+				"title": "Why Starbucks Operates Like a Bank | WSJ The Economics Of",
+				"description": "Starbucks, the $124.4 billion global coffee giant, trails only McDonald's as the largest restaurant chain by market capitalization.",
+				"thumbnails": {
+					"default": {
+						"url": "https://i.ytimg.com/vi/1-OJX1rwnl8/default.jpg",
+						"width": 120,
+						"height": 90
+					},
+					"medium": {
+						"url": "https://i.ytimg.com/vi/1-OJX1rwnl8/mqdefault.jpg",
+						"width": 320,
+						"height": 180
+					},
+					"high": {
+						"url": "https://i.ytimg.com/vi/1-OJX1rwnl8/hqdefault.jpg",
+						"width": 480,
+						"height": 360
+					}
+				},
+				"channelTitle": "The Wall Street Journal",
+				"liveBroadcastContent": "none",
+				"publishTime": "2022-01-12T17:45:50Z"
+			}
+		},
+		{
+			"kind": "youtube#searchResult",
+			"etag": "GqZlStH1KwwlaZaAw85ElphgvKU",
+			"id": {
+				"kind": "youtube#video",
+				"videoId": "5wQ9nAlO12E"
+			},
+			"snippet": {
+				"publishedAt": "2021-06-18T16:53:20Z",
+				"channelId": "UCK7tptUDHh-RYDsdxO1-5QQ",
+				"title": "Pilot Explains the Science of Turbulence | WSJ Booked",
+				"description": "Turbulence isn't entirely predictable, according to pilot Stuart Walker. Flights can be impacted by four different types of turbulence: ...",
+				"thumbnails": {
+					"default": {
+						"url": "https://i.ytimg.com/vi/5wQ9nAlO12E/default.jpg",
+						"width": 120,
+						"height": 90
+					},
+					"medium": {
+						"url": "https://i.ytimg.com/vi/5wQ9nAlO12E/mqdefault.jpg",
+						"width": 320,
+						"height": 180
+					},
+					"high": {
+						"url": "https://i.ytimg.com/vi/5wQ9nAlO12E/hqdefault.jpg",
+						"width": 480,
+						"height": 360
+					}
+				},
+				"channelTitle": "The Wall Street Journal",
+				"liveBroadcastContent": "none",
+				"publishTime": "2021-06-18T16:53:20Z"
+			}
+		},
+		{
+			"kind": "youtube#searchResult",
+			"etag": "JCKG1Jw1ImSYbn4wGukJW0AXAW0",
+			"id": {
+				"kind": "youtube#video",
+				"videoId": "JMLsHI8aV0g"
+			},
+			"snippet": {
+				"publishedAt": "2019-10-01T17:20:56Z",
+				"channelId": "UCK7tptUDHh-RYDsdxO1-5QQ",
+				"title": "How China Is Using Artificial Intelligence in Classrooms | WSJ",
+				"description": "A growing number of classrooms in China are equipped with artificial-intelligence cameras and brain-wave trackers. While many ...",
+				"thumbnails": {
+					"default": {
+						"url": "https://i.ytimg.com/vi/JMLsHI8aV0g/default.jpg",
+						"width": 120,
+						"height": 90
+					},
+					"medium": {
+						"url": "https://i.ytimg.com/vi/JMLsHI8aV0g/mqdefault.jpg",
+						"width": 320,
+						"height": 180
+					},
+					"high": {
+						"url": "https://i.ytimg.com/vi/JMLsHI8aV0g/hqdefault.jpg",
+						"width": 480,
+						"height": 360
+					}
+				},
+				"channelTitle": "The Wall Street Journal",
+				"liveBroadcastContent": "none",
+				"publishTime": "2019-10-01T17:20:56Z"
+			}
+		},
+		{
+			"kind": "youtube#searchResult",
+			"etag": "59KA6kY8yKbTe75CpQDHoR_oNAE",
+			"id": {
+				"kind": "youtube#video",
+				"videoId": "tOHUwwP6LLs"
+			},
+			"snippet": {
+				"publishedAt": "2019-02-26T01:48:53Z",
+				"channelId": "UCvy9bjqfawiaE_CklFSdnzg",
+				"title": "Jordan Peterson Confronts Australian Politician on Gender Politics and Quotas | Q&amp;A",
+				"description": "Dr. Jordan Peterson and prominent Australian Labor Party politician Terri Butler, clash over quotas in parliament on Q&A's ...",
+				"thumbnails": {
+					"default": {
+						"url": "https://i.ytimg.com/vi/tOHUwwP6LLs/default.jpg",
+						"width": 120,
+						"height": 90
+					},
+					"medium": {
+						"url": "https://i.ytimg.com/vi/tOHUwwP6LLs/mqdefault.jpg",
+						"width": 320,
+						"height": 180
+					},
+					"high": {
+						"url": "https://i.ytimg.com/vi/tOHUwwP6LLs/hqdefault.jpg",
+						"width": 480,
+						"height": 360
+					}
+				},
+				"channelTitle": "abcqanda",
+				"liveBroadcastContent": "none",
+				"publishTime": "2019-02-26T01:48:53Z"
+			}
+		}
+	]
+}
