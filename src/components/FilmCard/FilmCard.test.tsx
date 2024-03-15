@@ -1,7 +1,7 @@
 import { fireEvent, render } from '@testing-library/react'
-
-import FilmCard from './FilmCard'
 import { ThemeProvider } from 'styled-components'
+
+import FilmCard from '.'
 import { light } from '../../global.styles'
 
 describe('FilmCard', () => {

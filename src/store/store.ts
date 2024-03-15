@@ -1,7 +1,4 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit'
-import { movieApi } from 'store/api'
-import filterSlice from 'store/filterSlice'
-import themeSlice from './themeSlice'
 import {
 	persistReducer,
 	persistStore,
@@ -13,6 +10,11 @@ import {
 	REGISTER,
 } from 'redux-persist'
 import storage from 'redux-persist/lib/storage'
+
+import { movieApi } from 'store/api/api'
+import filterSlice from 'store/slice/filterSlice'
+
+import themeSlice from './slice/themeSlice'
 
 const persistConfig = {
 	key: 'root',

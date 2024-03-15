@@ -1,26 +1,9 @@
 import styled, { createGlobalStyle } from 'styled-components'
 
-import RobotoRegular from './assets/fonts/Roboto-Regular.woff2'
-import RobotoMedium from './assets/fonts/Roboto-Medium.woff2'
-import RobotoBold from './assets/fonts/Roboto-Bold.woff2'
-
-const size = {
-	xs: '400px', // for small screen mobile
-	sm: '600px', // for mobile screen
-	md: '900px', // for tablets
-	lg: '1280px', // for laptops
-	xl: '1440px', // for desktop / monitors
-	xxl: '1920px', // for big screens
-}
-
-export const device = {
-	xs: `(max-width: ${size.xs})`,
-	sm: `(max-width: ${size.sm})`,
-	md: `(max-width: ${size.md})`,
-	lg: `(max-width: ${size.lg})`,
-	xl: `(max-width: ${size.xl})`,
-	xxl: `(max-width: ${size.xxl})`,
-}
+import RobotoBold from 'assets/fonts/Roboto-Bold.woff2'
+import RobotoMedium from 'assets/fonts/Roboto-Medium.woff2'
+import RobotoRegular from 'assets/fonts/Roboto-Regular.woff2'
+import { device } from 'constants/breakpoints'
 
 export const GlobalStyles = createGlobalStyle`
 @font-face {
@@ -137,30 +120,3 @@ export const StyledWrapper = styled.div`
 		flex: 0 0 auto;
 	}
 `
-
-export const light = {
-	name: 'light',
-	colors: {
-		primary: '#cfcfcf',
-		secondary: '#f0f0f0',
-		active: 'black',
-		hover: '#ff9f00',
-		textActive: 'white',
-		background: 'hsl(0, 0%, 100%)',
-		text: '#000000d4',
-		textLight: '#00000066',
-	},
-}
-
-export const dark = {
-	name: 'dark',
-	colors: {
-		primary: '#ff9f00',
-		secondary: '#ab5f1a',
-		active: '#ff9f00',
-		hover: '#ab5f1a',
-		background: '#0f0f0f',
-		text: 'white',
-		textLight: '#bdbcbc',
-	},
-}
