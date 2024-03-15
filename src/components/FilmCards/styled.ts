@@ -1,5 +1,6 @@
-import { device } from 'constants/breakpoints'
 import styled from 'styled-components'
+
+import { device } from 'constants/breakpoints'
 
 export const StyledFilmCardsContainer = styled.div`
 	display: grid;

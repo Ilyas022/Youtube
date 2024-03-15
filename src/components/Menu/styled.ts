@@ -1,5 +1,6 @@
-import { device } from 'constants/breakpoints'
 import styled, { css } from 'styled-components'
+
+import { device } from 'constants/breakpoints'
 
 export const StyledPhoneMenu = styled.div<{ $open?: boolean }>`
 	position: absolute;

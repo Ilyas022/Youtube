@@ -1,4 +1,5 @@
 import { renderWithProviders } from 'utils/testWrapper'
+
 import Header from '.'
 
 describe('Header', () => {

@@ -1,11 +1,14 @@
 import React, { useRef, useState } from 'react'
 
+import ErrorBoundary from 'components/ErrorBoundary/ErrorBoundary'
+import { StyledWrongText } from 'components/FilmCards/styled'
+import SearchIcon from 'components/icons/SearchIcon'
+import SearchHints from 'components/SearchHints'
+import { StyledHintsBtn } from 'components/SearchHints/styled'
+import { useActions } from 'hooks/useActions'
 import { useDebounce } from 'hooks/useDebounce'
 import useOnClickOutside, { AnyEvent } from 'hooks/useOnClickOutside'
 import { useGetVideoSuggestionsQuery } from 'store/api/api'
-import { useActions } from 'hooks/useActions'
-
-import SearchHints from 'components/SearchHints'
 
 import {
 	StyledForm,
@@ -14,10 +17,6 @@ import {
 	StyledSearchHints,
 	StyledSearchInput,
 } from './styled'
-import { StyledHintsBtn } from 'components/SearchHints/styled'
-import ErrorBoundary from 'components/ErrorBoundary/ErrorBoundary'
-import { StyledWrongText } from 'components/FilmCards/styled'
-import SearchIcon from 'components/icons/SearchIcon'
 
 const SearchBar: React.FC = (): JSX.Element => {
 	const [search, setSearch] = useState('')

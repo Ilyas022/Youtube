@@ -1,6 +1,8 @@
-import { useScrollLock } from 'hooks/useScrollLock'
-import { StyledPhoneMenu } from './styled'
 import { useEffect } from 'react'
+
+import { useScrollLock } from 'hooks/useScrollLock'
+
+import { StyledPhoneMenu } from './styled'
 
 interface IPhoneMenu {
 	isOpened: boolean

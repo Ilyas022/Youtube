@@ -1,7 +1,9 @@
-import SearchBar from '.'
 import { fireEvent, waitFor } from '@testing-library/react'
-import { renderWithProviders } from 'utils/testWrapper'
 import fetch from 'jest-fetch-mock'
+
+import { renderWithProviders } from 'utils/testWrapper'
+
+import SearchBar from '.'
 
 describe('SearchBar', () => {
 	it('renders the search input and button', () => {

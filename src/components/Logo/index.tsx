@@ -1,4 +1,5 @@
 import YtIcon from 'components/icons/YtIcon'
+
 import { StyledLogo } from './styled'
 
 const Logo: React.FC = (): JSX.Element => {

@@ -9,6 +9,7 @@ module.exports = ({ env }) => ({
 	resolve: {
 		extensions: ['.tsx', '.ts', '.js'],
 		alias: {
+			src: path.resolve(__dirname, '../src'),
 			components: path.resolve(__dirname, '../src/components'),
 			constants: path.resolve(__dirname, '../src/constants'),
 			hooks: path.resolve(__dirname, '../src/hooks'),

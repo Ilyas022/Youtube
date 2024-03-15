@@ -1,9 +1,10 @@
-import Header from './components/Header'
-import FilmCards from './components/FilmCards'
-import Footer from './components/Footer'
 import ErrorBoundary from 'components/ErrorBoundary/ErrorBoundary'
 import { StyledWrongText } from 'components/FilmCards/styled'
-import { StyledWrapper } from './global.styles'
+import { StyledWrapper } from 'src/global.styles'
+
+import FilmCards from './components/FilmCards'
+import Footer from './components/Footer'
+import Header from './components/Header'
 
 const App: React.FC = (): JSX.Element => {
 	return (

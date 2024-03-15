@@ -1,8 +1,8 @@
 import styled, { createGlobalStyle } from 'styled-components'
 
-import RobotoRegular from './assets/fonts/Roboto-Regular.woff2'
-import RobotoMedium from './assets/fonts/Roboto-Medium.woff2'
-import RobotoBold from './assets/fonts/Roboto-Bold.woff2'
+import RobotoBold from 'assets/fonts/Roboto-Bold.woff2'
+import RobotoMedium from 'assets/fonts/Roboto-Medium.woff2'
+import RobotoRegular from 'assets/fonts/Roboto-Regular.woff2'
 import { device } from 'constants/breakpoints'
 
 export const GlobalStyles = createGlobalStyle`

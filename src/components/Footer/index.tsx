@@ -1,7 +1,7 @@
 import FbIcon from 'components/icons/FbIcon'
 import IgIcon from 'components/icons/IgIcon'
-import TwIcon from 'components/icons/TwIcon'
 import InIcon from 'components/icons/InIcon'
+import TwIcon from 'components/icons/TwIcon'
 
 import {
 	StyledFooter,

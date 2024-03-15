@@ -1,4 +1,5 @@
 import { renderWithProviders } from 'utils/testWrapper'
+
 import Footer from '.'
 
 describe('Footer', () => {

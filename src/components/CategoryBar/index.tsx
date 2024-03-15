@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import { useActions } from 'hooks/useActions'
 
+import { useActions } from 'hooks/useActions'
 import { videoCategoryMockValues } from 'utils/mockValues'
 
 import { StyledBtn, StyledBtnContainer, StyledCategoryBar } from './styled'

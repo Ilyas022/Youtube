@@ -1,4 +1,5 @@
 import YtIcon from 'components/icons/YtIcon'
+
 import {
 	StyledDirectorImgContainer,
 	StyledDirectorInfo,

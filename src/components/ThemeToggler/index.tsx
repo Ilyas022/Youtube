@@ -1,13 +1,15 @@
 import { useState } from 'react'
+
+import { dark, light } from 'constants/theme'
+import { useActions } from 'hooks/useActions'
+import { useTypedSelector } from 'hooks/useTypedSelector'
+
 import {
 	StyledThemneToggler,
 	StyledToggleInput,
 	StyledToggleLabel,
 	StyledToggleSpan,
 } from './styled'
-import { useActions } from 'hooks/useActions'
-import { useTypedSelector } from 'hooks/useTypedSelector'
-import { dark, light } from 'constants/theme'
 
 const ThemeToggler: React.FC = (): JSX.Element => {
 	const { setTheme } = useActions()
