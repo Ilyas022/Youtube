@@ -1,4 +1,4 @@
-import { device } from '../../global.styles'
+import { device } from 'constants/breakpoints'
 import styled, { css } from 'styled-components'
 
 export const StyledPhoneMenu = styled.div<{ $open?: boolean }>`

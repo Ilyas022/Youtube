@@ -6,8 +6,8 @@ import {
 	StyledToggleSpan,
 } from './styled'
 import { useActions } from 'hooks/useActions'
-import { dark, light } from '../../global.styles'
 import { useTypedSelector } from 'hooks/useTypedSelector'
+import { dark, light } from 'constants/theme'
 
 const ThemeToggler: React.FC = (): JSX.Element => {
 	const { setTheme } = useActions()

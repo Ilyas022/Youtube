@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit'
-import { light } from '../../global.styles'
+import { light } from 'constants/theme'
 import { IThemeColors } from 'types/interfaces'
 
 interface IInitialState {

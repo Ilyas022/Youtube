@@ -1,4 +1,4 @@
-import { device } from '../../global.styles'
+import { device } from 'constants/breakpoints'
 import styled from 'styled-components'
 
 export const StyledCategoryBar = styled.div`
