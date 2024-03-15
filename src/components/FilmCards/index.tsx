@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 import { useTypedSelector } from 'hooks/useTypedSelector'
-import { useGetVideosQuery } from 'store/api'
+import { useGetVideosQuery } from 'store/api/api'
 
 import FilmCard from 'components/FilmCard'
 import FilmCardSkeleton from 'components/skeletons'

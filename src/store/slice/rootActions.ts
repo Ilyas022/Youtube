@@ -1,4 +1,4 @@
-import filterSlice from 'store/filterSlice'
+import filterSlice from 'store/slice/filterSlice'
 import themeSlice from './themeSlice'
 
 const rootActions = {

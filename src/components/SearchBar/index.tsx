@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react'
 
 import { useDebounce } from 'hooks/useDebounce'
 import useOnClickOutside, { AnyEvent } from 'hooks/useOnClickOutside'
-import { useGetVideoSuggestionsQuery } from 'store/api'
+import { useGetVideoSuggestionsQuery } from 'store/api/api'
 import { useActions } from 'hooks/useActions'
 
 import SearchHints from 'components/SearchHints'
