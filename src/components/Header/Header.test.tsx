@@ -1,5 +1,5 @@
 import { renderWithProviders } from 'utils/testWrapper'
-import Header from './Header'
+import Header from '.'
 
 describe('Header', () => {
 	it('should render', () => {

@@ -5,7 +5,7 @@ import useOnClickOutside, { AnyEvent } from 'hooks/useOnClickOutside'
 import { useGetVideoSuggestionsQuery } from 'store/api'
 import { useActions } from 'hooks/useActions'
 
-import SearchHints from 'components/SearchHints/SearchHints'
+import SearchHints from 'components/SearchHints'
 
 import {
 	StyledForm,
@@ -13,10 +13,10 @@ import {
 	StyledSearchContainer,
 	StyledSearchHints,
 	StyledSearchInput,
-} from './SearchBar.styles'
-import { StyledHintsBtn } from 'components/SearchHints/SearchHints.styles'
+} from './styled'
+import { StyledHintsBtn } from 'components/SearchHints/styled'
 import ErrorBoundary from 'components/ErrorBoundary/ErrorBoundary'
-import { StyledWrongText } from 'components/FilmCards/FilmCards.styles'
+import { StyledWrongText } from 'components/FilmCards/styled'
 import SearchIcon from 'components/icons/SearchIcon'
 
 const SearchBar: React.FC = (): JSX.Element => {

@@ -1,4 +1,4 @@
-import { StyledBurgerBtn, StyledBurgerInput, StyledBurgerLabel } from './BurgerButton.styles'
+import { StyledBurgerBtn, StyledBurgerInput, StyledBurgerLabel } from './styled'
 
 interface IBurgerButton {
 	isOpened: boolean

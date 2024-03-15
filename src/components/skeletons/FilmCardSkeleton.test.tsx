@@ -1,5 +1,5 @@
 import { renderWithProviders } from 'utils/testWrapper'
-import FilmCardSkeleton from './FilmCardSkeleton'
+import FilmCardSkeleton from '.'
 
 describe('FilmCardSkeleton', () => {
 	it('should render', () => {

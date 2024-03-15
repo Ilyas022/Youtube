@@ -1,5 +1,5 @@
 import { renderWithProviders } from 'utils/testWrapper'
-import ThemeToggler from './ThemeToggler'
+import ThemeToggler from '.'
 import { fireEvent } from '@testing-library/react'
 
 describe('Theme toggler', () => {

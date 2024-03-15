@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react'
 
 import { useScrollLock } from 'hooks/useScrollLock'
 
-import { StyledIframe, StyledPopUp, StyledPopUpContainer } from './PopUp.styles'
+import { StyledIframe, StyledPopUp, StyledPopUpContainer } from './styled'
 
 interface IPopUp {
 	link: string

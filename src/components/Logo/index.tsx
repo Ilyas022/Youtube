@@ -1,5 +1,5 @@
 import YtIcon from 'components/icons/YtIcon'
-import { StyledLogo } from './Logo.styles'
+import { StyledLogo } from './styled'
 
 const Logo: React.FC = (): JSX.Element => {
 	return (

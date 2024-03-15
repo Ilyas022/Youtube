@@ -11,7 +11,7 @@ import {
 	StyledFooterTopics,
 	StyledIconContainer,
 	StyledSeparator,
-} from './Footer.styles'
+} from './styled'
 
 const Footer: React.FC = (): JSX.Element => {
 	return (

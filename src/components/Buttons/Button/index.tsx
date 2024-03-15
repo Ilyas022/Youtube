@@ -1,4 +1,4 @@
-import { StyledBtn } from './Button.styles'
+import { StyledBtn } from './styled'
 
 interface IButton {
 	onClick: () => void

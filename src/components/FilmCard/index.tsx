@@ -7,7 +7,7 @@ import {
 	StyledFilmTitle,
 	StyledImgContainer,
 	StyledSeparator,
-} from './FilmCard.styles'
+} from './styled'
 
 interface IFilmCard {
 	author: string

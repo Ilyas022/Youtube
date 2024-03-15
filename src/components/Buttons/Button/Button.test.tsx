@@ -1,6 +1,6 @@
 import { renderWithProviders } from 'utils/testWrapper'
 import { fireEvent } from '@testing-library/react'
-import Button from './Button'
+import Button from '.'
 
 describe('Button', () => {
 	it('should render', () => {

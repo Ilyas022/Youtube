@@ -1,5 +1,5 @@
 import { renderWithProviders } from 'utils/testWrapper'
-import SearchHints from './SearchHints'
+import SearchHints from '.'
 import { fireEvent } from '@testing-library/react'
 
 describe('SearchHints', () => {

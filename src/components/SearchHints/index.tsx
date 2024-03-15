@@ -1,4 +1,4 @@
-import { StyledHintsBtn, StyledSearchHints } from './SearchHints.styles'
+import { StyledHintsBtn, StyledSearchHints } from './styled'
 
 interface ISearchHints {
 	isLoading: boolean

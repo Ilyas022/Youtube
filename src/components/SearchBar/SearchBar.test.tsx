@@ -1,4 +1,4 @@
-import SearchBar from './SearchBar'
+import SearchBar from '.'
 import { fireEvent, waitFor } from '@testing-library/react'
 import { renderWithProviders } from 'utils/testWrapper'
 import fetch from 'jest-fetch-mock'

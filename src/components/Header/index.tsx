@@ -1,11 +1,11 @@
-import CategoryBar from 'components/CategoryBar/CategoryBar'
-import Logo from 'components/Logo/Logo'
-import SearchBar from 'components/SearchBar/SearchBar'
-import ThemeToggler from 'components/ThemeToggler/ThemeToggler'
+import CategoryBar from 'components/CategoryBar'
+import Logo from 'components/Logo'
+import SearchBar from 'components/SearchBar'
+import ThemeToggler from 'components/ThemeToggler'
 
-import { StyledBottomWrapper, StyledHeader, StyledTopWrapper } from './Header.styles'
-import BurgerButton from 'components/Buttons/BurgerButton/BurgerButton'
-import PhoneMenu from 'components/Menu/PhoneMenu'
+import { StyledBottomWrapper, StyledHeader, StyledTopWrapper } from './styled'
+import BurgerButton from 'components/Buttons/BurgerButton'
+import PhoneMenu from 'components/Menu'
 import { useState } from 'react'
 
 const Header: React.FC = (): JSX.Element => {

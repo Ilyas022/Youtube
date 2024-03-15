@@ -3,12 +3,12 @@ import React, { useState } from 'react'
 import { useTypedSelector } from 'hooks/useTypedSelector'
 import { useGetVideosQuery } from 'store/api'
 
-import FilmCard from 'components/FilmCard/FilmCard'
-import FilmCardSkeleton from 'components/skeletons/FilmCardSkeleton'
-import Button from '../Buttons/Button/Button'
-import PopUp from 'components/PopUp/PopUp'
+import FilmCard from 'components/FilmCard'
+import FilmCardSkeleton from 'components/skeletons'
+import Button from '../Buttons/Button'
+import PopUp from 'components/PopUp'
 
-import { StyledBtnContainer, StyledFilmCardsContainer, StyledWrongText } from './FilmCards.styles'
+import { StyledBtnContainer, StyledFilmCardsContainer, StyledWrongText } from './styled'
 
 const FilmCards: React.FC = (): JSX.Element => {
 	const { title, category } = useTypedSelector((state) => state.filters)

@@ -4,7 +4,7 @@ import {
 	StyledToggleInput,
 	StyledToggleLabel,
 	StyledToggleSpan,
-} from './ThemeToggler.styles'
+} from './styled'
 import { useActions } from 'hooks/useActions'
 import { dark, light } from '../../global.styles'
 import { useTypedSelector } from 'hooks/useTypedSelector'

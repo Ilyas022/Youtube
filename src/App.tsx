@@ -1,9 +1,9 @@
 import { ThemeProvider } from 'styled-components'
-import Header from './components/Header/Header'
-import FilmCards from './components/FilmCards/FilmCards'
-import Footer from './components/Footer/Footer'
+import Header from './components/Header'
+import FilmCards from './components/FilmCards'
+import Footer from './components/Footer'
 import ErrorBoundary from 'components/ErrorBoundary/ErrorBoundary'
-import { StyledWrongText } from 'components/FilmCards/FilmCards.styles'
+import { StyledWrongText } from 'components/FilmCards/styled'
 import { GlobalStyles, StyledWrapper } from './global.styles'
 import { useTypedSelector } from 'hooks/useTypedSelector'
 

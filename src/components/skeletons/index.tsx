@@ -5,7 +5,7 @@ import {
 	StyledFilmTitleSkeleton,
 	StyledImgSkeleton,
 	StyledSeparator,
-} from './FilmCardSkeleton.styles'
+} from './styled'
 
 const FilmCardSkeleton: React.FC = (): JSX.Element => {
 	return (

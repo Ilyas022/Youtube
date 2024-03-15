@@ -1,5 +1,5 @@
 import { useScrollLock } from 'hooks/useScrollLock'
-import { StyledPhoneMenu } from './PhoneMenu.styles'
+import { StyledPhoneMenu } from './styled'
 import { useEffect } from 'react'
 
 interface IPhoneMenu {

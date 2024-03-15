@@ -3,7 +3,7 @@ import { useActions } from 'hooks/useActions'
 
 import { videoCategoryMockValues } from 'utils/mockValues'
 
-import { StyledBtn, StyledBtnContainer, StyledCategoryBar } from './CategoryBar.styles'
+import { StyledBtn, StyledBtnContainer, StyledCategoryBar } from './styled'
 
 const CategoryBar: React.FC = (): JSX.Element => {
 	const { setCategory } = useActions()

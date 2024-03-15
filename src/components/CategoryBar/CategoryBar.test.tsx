@@ -1,6 +1,6 @@
 import { renderWithProviders } from 'utils/testWrapper'
 import { fireEvent } from '@testing-library/react'
-import CategoryBar from './CategoryBar'
+import CategoryBar from '.'
 
 describe('Category bar', () => {
 	it('should render', () => {
