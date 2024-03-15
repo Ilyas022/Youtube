@@ -24,9 +24,10 @@
           "utils/*": ["src/utils/*"],
           "assets/*": ["src/assets/*"],
           "store/*": ["src/store/*"],
+          "types/*": ["src/types/*"],
         },
     "types": ["node", "jest", "@testing-library/jest-dom"],
   },
-  "include": ["./src/**/*", "./src/declarations.d.ts"],
+  "include": ["./src/**/*", "src/types/declarations.d.ts"],
   "exclude": ["cypress.config.ts", "cypress", "node_modules"]
 }

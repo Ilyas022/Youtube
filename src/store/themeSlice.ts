@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit'
 import { light } from '../global.styles'
-import { IThemeColors } from 'utils/interfaces'
+import { IThemeColors } from 'types/interfaces'
 
 interface IInitialState {
 	theme: {

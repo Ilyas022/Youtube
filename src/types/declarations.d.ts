@@ -1,5 +1,5 @@
 import 'styled-components'
-import { IThemeColors } from 'utils/interfaces'
+import { IThemeColors } from './interfaces'
 
 declare module '*.module.css' {
 	const classes: { readonly [key: string]: string }
