@@ -30,6 +30,9 @@ const FilmCards: React.FC = (): JSX.Element => {
 		data && setPageToken(data.nextPageToken)
 	}
 
+	const isNodata = !isLoading && !data?.items.length
+	const isDataExist = data?.items.length
+
 	if (isLoading) {
 		return (
 			<StyledFilmCardsContainer data-testid="loader">
@@ -42,14 +45,14 @@ const FilmCards: React.FC = (): JSX.Element => {
 		)
 	}
 
-	if (!isLoading && !data?.items.length) {
+	if (isNodata) {
 		return <StyledWrongText data-testid="placeholder">{config.phText}</StyledWrongText>
 	}
 
 	return (
 		<>
 			<StyledFilmCardsContainer data-testid="films container">
-				{data?.items.length &&
+				{isDataExist &&
 					data.items.map((video) => {
 						return (
 							<FilmCard
@@ -63,7 +66,7 @@ const FilmCards: React.FC = (): JSX.Element => {
 						)
 					})}
 			</StyledFilmCardsContainer>
-			{data && (
+			{isDataExist && (
 				<StyledBtnContainer>
 					<Button onClick={handleShowMore} text="Show More" />
 				</StyledBtnContainer>

@@ -38,7 +38,7 @@ const SearchBar: React.FC = (): JSX.Element => {
 	const { data: hints } = useGetVideoSuggestionsQuery(debouncedSearch)
 
 	const isLoading = false
-
+	const isShowHints = hints && inputActive
 	const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
 		setSearch(e.target.value)
 	}
@@ -67,7 +67,7 @@ const SearchBar: React.FC = (): JSX.Element => {
 				<ErrorBoundary
 					fallback={<StyledWrongText>Something went wrong with search hints</StyledWrongText>}
 				>
-					{hints && inputActive && (
+					{isShowHints && (
 						<StyledSearchHints>
 							<SearchHints
 								isLoading={isLoading}
