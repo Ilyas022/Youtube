@@ -15,7 +15,7 @@ const ThemeToggler: React.FC = (): JSX.Element => {
 	const { setTheme } = useActions()
 	const { name: themeName } = useTypedSelector((state) => state.theme.theme)
 
-	const [isToggled, setIsToggled] = useState<boolean>(themeName === 'dark' ? true : false)
+	const [isToggled, setIsToggled] = useState<boolean>(() => (themeName === 'dark' ? true : false))
 	const onToggle = () => {
 		setIsToggled(!isToggled)
 		setTheme(isToggled ? light : dark)
