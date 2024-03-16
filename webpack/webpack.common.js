@@ -4,6 +4,7 @@ const Dotenv = require('dotenv-webpack')
 const ESLintPlugin = require('eslint-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const TerserPlugin = require('terser-webpack-plugin')
 
 module.exports = ({ env }) => ({
 	entry: path.resolve(__dirname, '..', './src/index.tsx'),
@@ -19,6 +20,10 @@ module.exports = ({ env }) => ({
 			store: path.resolve(__dirname, '../src/store'),
 			types: path.resolve(__dirname, '../src/types'),
 		},
+	},
+	optimization: {
+		minimize: true,
+		minimizer: [new TerserPlugin()],
 	},
 	module: {
 		rules: [

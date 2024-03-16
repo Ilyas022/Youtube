@@ -6,5 +6,8 @@ module.exports = {
 		hot: true,
 		port: 8000,
 		historyApiFallback: true,
+		client: {
+			overlay: true,
+		},
 	},
 }
