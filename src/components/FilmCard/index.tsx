@@ -20,13 +20,9 @@ interface IFilmCard {
 	onClick: (e: React.MouseEvent<HTMLButtonElement>) => void
 }
 
-const FilmCard: React.FC<IFilmCard> = ({
-	title,
-	author,
-	year,
-	image,
-	onClick,
-}: IFilmCard): JSX.Element => {
+const FilmCard: React.FC<IFilmCard> = (props: IFilmCard): JSX.Element => {
+	const { title, author, year, image, onClick } = props
+
 	return (
 		<StyledFilmCard onClick={onClick}>
 			<StyledImgContainer>
