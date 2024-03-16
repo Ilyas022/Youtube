@@ -6,6 +6,7 @@ import FilmCardSkeleton from 'components/skeletons'
 import { useTypedSelector } from 'hooks/useTypedSelector'
 import { useGetVideosQuery } from 'store/api/api'
 
+import { config } from './config'
 import { StyledBtnContainer, StyledFilmCardsContainer, StyledWrongText } from './styled'
 import Button from '../Buttons/Button'
 
@@ -42,11 +43,7 @@ const FilmCards: React.FC = (): JSX.Element => {
 	}
 
 	if (!isLoading && !data?.items.length) {
-		return (
-			<StyledWrongText data-testid="placeholder">
-				There are no such videos or or the maximum number of api requests has been exceeded
-			</StyledWrongText>
-		)
+		return <StyledWrongText data-testid="placeholder">{config.phText}</StyledWrongText>
 	}
 
 	return (

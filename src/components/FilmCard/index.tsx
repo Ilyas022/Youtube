@@ -1,5 +1,6 @@
 import YtIcon from 'components/icons/YtIcon'
 
+import { config } from './config'
 import {
 	StyledDirectorImgContainer,
 	StyledDirectorInfo,
@@ -29,15 +30,7 @@ const FilmCard: React.FC<IFilmCard> = ({
 	return (
 		<StyledFilmCard onClick={onClick}>
 			<StyledImgContainer>
-				<img
-					src={
-						image
-							? image
-							: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/2560px-Placeholder_view_vector.svg.png'
-					}
-					alt="film preview"
-					loading="lazy"
-				/>
+				<img src={image ? image : config.imageAltUrl} alt={config.imageAltText} loading="lazy" />
 			</StyledImgContainer>
 
 			<StyledDirectorInfo>
