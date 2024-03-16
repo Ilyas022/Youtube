@@ -10,6 +10,10 @@ import { config } from './config'
 import { StyledBtnContainer, StyledFilmCardsContainer, StyledWrongText } from './styled'
 import Button from '../Buttons/Button'
 
+const loader = Array(16)
+	.fill(undefined)
+	.map((_, i) => <FilmCardSkeleton key={i} />)
+
 const FilmCards: React.FC = (): JSX.Element => {
 	const { title, category } = useTypedSelector((state) => state.filters)
 
@@ -34,15 +38,7 @@ const FilmCards: React.FC = (): JSX.Element => {
 	const isDataExist = data?.items.length
 
 	if (isLoading) {
-		return (
-			<StyledFilmCardsContainer data-testid="loader">
-				<FilmCardSkeleton />
-				<FilmCardSkeleton />
-				<FilmCardSkeleton />
-				<FilmCardSkeleton />
-				<FilmCardSkeleton />
-			</StyledFilmCardsContainer>
-		)
+		return <StyledFilmCardsContainer data-testid="loader">{loader}</StyledFilmCardsContainer>
 	}
 
 	if (isNodata) {
