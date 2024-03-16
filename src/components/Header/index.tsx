@@ -9,7 +9,7 @@ import { ThemeToggler } from 'components/ThemeToggler'
 
 import { StyledBottomWrapper, StyledHeader, StyledTopWrapper } from './styled'
 
-export const Header: React.FC = (): JSX.Element => {
+export const Header = () => {
 	const [isMenuOpened, setMenuOpened] = useState(false)
 	return (
 		<StyledHeader>

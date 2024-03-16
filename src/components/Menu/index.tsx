@@ -8,7 +8,7 @@ interface IPhoneMenu {
 	isOpened: boolean
 }
 
-export const PhoneMenu: React.FC<IPhoneMenu> = ({ isOpened }: IPhoneMenu): JSX.Element => {
+export const PhoneMenu = ({ isOpened }: IPhoneMenu) => {
 	const [lockScroll, unlockScroll] = useScrollLock()
 
 	useEffect(() => {

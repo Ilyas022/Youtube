@@ -9,7 +9,7 @@ interface IPopUp {
 	setOpened: () => void
 }
 
-export const PopUp: React.FC<IPopUp> = ({ link, setOpened }: IPopUp): JSX.Element => {
+export const PopUp = ({ link, setOpened }: IPopUp) => {
 	const [lockScroll, unlockScroll] = useScrollLock()
 	const ref = useRef(null)
 

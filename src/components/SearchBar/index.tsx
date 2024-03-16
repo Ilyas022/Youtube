@@ -18,7 +18,7 @@ import {
 	StyledSearchInput,
 } from './styled'
 
-export const SearchBar: React.FC = (): JSX.Element => {
+export const SearchBar = () => {
 	const [search, setSearch] = useState('')
 	const [inputActive, setInputActive] = useState(false)
 	const debouncedSearch = useDebounce(search)

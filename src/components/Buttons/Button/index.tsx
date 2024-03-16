@@ -5,6 +5,6 @@ interface IButton {
 	text: string
 }
 
-export const Button: React.FC<IButton> = ({ onClick, text }: IButton): JSX.Element => {
+export const Button = ({ onClick, text }: IButton) => {
 	return <StyledBtn onClick={() => onClick()}>{text}</StyledBtn>
 }

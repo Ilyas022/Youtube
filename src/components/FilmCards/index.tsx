@@ -14,7 +14,7 @@ const loader = Array(16)
 	.fill(undefined)
 	.map((_, i) => <FilmCardSkeleton key={i} />)
 
-export const FilmCards: React.FC = (): JSX.Element => {
+export const FilmCards = () => {
 	const { title, category } = useTypedSelector((state) => state.filters)
 
 	const [isPopUpOpened, setPopUp] = useState(false)

@@ -7,7 +7,7 @@ import {
 	StyledSeparator,
 } from './styled'
 
-export const FilmCardSkeleton: React.FC = (): JSX.Element => {
+export const FilmCardSkeleton = () => {
 	return (
 		<div data-testid="Film card skeleton">
 			<StyledImgSkeleton />

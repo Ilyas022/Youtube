@@ -10,7 +10,7 @@ import {
 	StyledSeparator,
 } from './styled'
 
-export const Footer: React.FC = (): JSX.Element => {
+export const Footer = () => {
 	return (
 		<StyledFooter>
 			<StyledFooterLinks>
