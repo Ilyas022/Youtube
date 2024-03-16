@@ -1,4 +1,4 @@
-import YtIcon from 'components/icons/YtIcon'
+import { Icon } from 'components/Icon'
 
 import { config } from './config'
 import {
@@ -35,7 +35,7 @@ const FilmCard: React.FC<IFilmCard> = ({
 
 			<StyledDirectorInfo>
 				<StyledDirectorImgContainer>
-					<YtIcon />
+					<Icon name="youtube" />
 				</StyledDirectorImgContainer>
 				<div>
 					<StyledFilmTitle>{title}</StyledFilmTitle>

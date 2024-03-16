@@ -1,7 +1,4 @@
-import FbIcon from 'components/icons/FbIcon'
-import IgIcon from 'components/icons/IgIcon'
-import InIcon from 'components/icons/InIcon'
-import TwIcon from 'components/icons/TwIcon'
+import { Icon } from 'components/Icon'
 
 import {
 	StyledFooter,
@@ -27,10 +24,10 @@ const Footer: React.FC = (): JSX.Element => {
 					</StyledFooterTopic>
 				</StyledFooterTopics>
 				<StyledIconContainer>
-					<FbIcon />
-					<TwIcon />
-					<IgIcon />
-					<InIcon />
+					<Icon name="facebook" />
+					<Icon name="twiter" />
+					<Icon name="instagram" />
+					<Icon name="linkedIn" />
 				</StyledIconContainer>
 			</StyledFooterLinks>
 			<StyledFooterAffiliation>2023 Modsen company</StyledFooterAffiliation>

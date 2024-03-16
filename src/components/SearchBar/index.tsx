@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react'
 
 import ErrorBoundary from 'components/ErrorBoundary/ErrorBoundary'
 import { StyledWrongText } from 'components/FilmCards/styled'
-import SearchIcon from 'components/icons/SearchIcon'
+import { Icon } from 'components/Icon'
 import SearchHints from 'components/SearchHints'
 import { StyledHintsBtn } from 'components/SearchHints/styled'
 import { useActions } from 'hooks/useActions'
@@ -84,7 +84,7 @@ const SearchBar: React.FC = (): JSX.Element => {
 				</ErrorBoundary>
 			</StyledSearchContainer>
 			<StyledSearchBtn data-testid="search submit button">
-				<SearchIcon />
+				<Icon name="search" />
 			</StyledSearchBtn>
 		</StyledForm>
 	)
