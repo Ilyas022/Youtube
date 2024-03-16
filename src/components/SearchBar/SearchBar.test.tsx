@@ -3,7 +3,7 @@ import fetch from 'jest-fetch-mock'
 
 import { renderWithProviders } from 'utils/testWrapper'
 
-import SearchBar from '.'
+import { SearchBar } from '.'
 
 describe('SearchBar', () => {
 	it('renders the search input and button', () => {

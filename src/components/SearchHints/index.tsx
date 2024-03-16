@@ -6,7 +6,7 @@ interface ISearchHints {
 	onClick: (value: string) => void
 }
 
-const SearchHints: React.FC<ISearchHints> = (props: ISearchHints): JSX.Element => {
+export const SearchHints: React.FC<ISearchHints> = (props: ISearchHints): JSX.Element => {
 	const { isLoading, onClick, hints } = props
 	return (
 		<StyledSearchHints>
@@ -31,5 +31,3 @@ const SearchHints: React.FC<ISearchHints> = (props: ISearchHints): JSX.Element =
 		</StyledSearchHints>
 	)
 }
-
-export default SearchHints

@@ -2,7 +2,7 @@ import { fireEvent } from '@testing-library/react'
 
 import { renderWithProviders } from 'utils/testWrapper'
 
-import Button from '.'
+import { Button } from '.'
 
 describe('Button', () => {
 	it('should render', () => {

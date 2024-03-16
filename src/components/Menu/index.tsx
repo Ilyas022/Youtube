@@ -8,7 +8,7 @@ interface IPhoneMenu {
 	isOpened: boolean
 }
 
-const PhoneMenu: React.FC<IPhoneMenu> = ({ isOpened }: IPhoneMenu): JSX.Element => {
+export const PhoneMenu: React.FC<IPhoneMenu> = ({ isOpened }: IPhoneMenu): JSX.Element => {
 	const [lockScroll, unlockScroll] = useScrollLock()
 
 	useEffect(() => {
@@ -27,5 +27,3 @@ const PhoneMenu: React.FC<IPhoneMenu> = ({ isOpened }: IPhoneMenu): JSX.Element 
 		</StyledPhoneMenu>
 	)
 }
-
-export default PhoneMenu

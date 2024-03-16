@@ -20,7 +20,7 @@ interface IFilmCard {
 	onClick: (e: React.MouseEvent<HTMLButtonElement>) => void
 }
 
-const FilmCard: React.FC<IFilmCard> = (props: IFilmCard): JSX.Element => {
+export const FilmCard: React.FC<IFilmCard> = (props: IFilmCard): JSX.Element => {
 	const { title, author, year, image, onClick } = props
 
 	return (
@@ -45,5 +45,3 @@ const FilmCard: React.FC<IFilmCard> = (props: IFilmCard): JSX.Element => {
 		</StyledFilmCard>
 	)
 }
-
-export default FilmCard

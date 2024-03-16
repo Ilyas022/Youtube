@@ -11,7 +11,7 @@ import {
 	StyledToggleSpan,
 } from './styled'
 
-const ThemeToggler: React.FC = (): JSX.Element => {
+export const ThemeToggler: React.FC = (): JSX.Element => {
 	const { setTheme } = useActions()
 	const { name: themeName } = useTypedSelector((state) => state.theme.theme)
 
@@ -35,5 +35,3 @@ const ThemeToggler: React.FC = (): JSX.Element => {
 		</StyledThemneToggler>
 	)
 }
-
-export default ThemeToggler

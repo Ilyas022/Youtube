@@ -5,7 +5,7 @@ interface IBurgerButton {
 	setOpened: () => void
 }
 
-const BurgerButton: React.FC<IBurgerButton> = ({
+export const BurgerButton: React.FC<IBurgerButton> = ({
 	isOpened,
 	setOpened,
 }: IBurgerButton): JSX.Element => {
@@ -20,5 +20,3 @@ const BurgerButton: React.FC<IBurgerButton> = ({
 		</StyledBurgerBtn>
 	)
 }
-
-export default BurgerButton

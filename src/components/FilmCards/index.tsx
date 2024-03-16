@@ -1,20 +1,20 @@
 import React, { useState } from 'react'
 
-import FilmCard from 'components/FilmCard'
-import PopUp from 'components/PopUp'
-import FilmCardSkeleton from 'components/skeletons'
+import { Button } from 'components//Buttons/Button'
+import { FilmCard } from 'components/FilmCard'
+import { PopUp } from 'components/PopUp'
+import { FilmCardSkeleton } from 'components/skeletons'
 import { useTypedSelector } from 'hooks/useTypedSelector'
 import { useGetVideosQuery } from 'store/api/api'
 
 import { config } from './config'
 import { StyledBtnContainer, StyledFilmCardsContainer, StyledWrongText } from './styled'
-import Button from '../Buttons/Button'
 
 const loader = Array(16)
 	.fill(undefined)
 	.map((_, i) => <FilmCardSkeleton key={i} />)
 
-const FilmCards: React.FC = (): JSX.Element => {
+export const FilmCards: React.FC = (): JSX.Element => {
 	const { title, category } = useTypedSelector((state) => state.filters)
 
 	const [isPopUpOpened, setPopUp] = useState(false)
@@ -82,5 +82,3 @@ const FilmCards: React.FC = (): JSX.Element => {
 		</>
 	)
 }
-
-export default FilmCards

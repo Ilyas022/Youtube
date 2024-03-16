@@ -5,7 +5,7 @@ import { videoCategoryMockValues } from 'utils/mockValues'
 
 import { StyledBtn, StyledBtnContainer, StyledCategoryBar } from './styled'
 
-const CategoryBar: React.FC = (): JSX.Element => {
+export const CategoryBar: React.FC = (): JSX.Element => {
 	const { setCategory } = useActions()
 	const [btnCategory, setBtnCategory] = useState(videoCategoryMockValues[0].id)
 
@@ -29,5 +29,3 @@ const CategoryBar: React.FC = (): JSX.Element => {
 		</StyledCategoryBar>
 	)
 }
-
-export default CategoryBar

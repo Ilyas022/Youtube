@@ -1,6 +1,6 @@
 import { renderWithProviders } from 'utils/testWrapper'
 
-import Footer from '.'
+import { Footer } from '.'
 
 describe('Footer', () => {
 	it('should render', () => {

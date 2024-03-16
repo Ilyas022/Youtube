@@ -1,9 +1,9 @@
 import React, { useRef, useState } from 'react'
 
-import ErrorBoundary from 'components/ErrorBoundary/ErrorBoundary'
+import { ErrorBoundary } from 'components/ErrorBoundary'
 import { StyledWrongText } from 'components/FilmCards/styled'
 import { Icon } from 'components/Icon'
-import SearchHints from 'components/SearchHints'
+import { SearchHints } from 'components/SearchHints'
 import { StyledHintsBtn } from 'components/SearchHints/styled'
 import { useActions } from 'hooks/useActions'
 import { useDebounce } from 'hooks/useDebounce'
@@ -18,7 +18,7 @@ import {
 	StyledSearchInput,
 } from './styled'
 
-const SearchBar: React.FC = (): JSX.Element => {
+export const SearchBar: React.FC = (): JSX.Element => {
 	const [search, setSearch] = useState('')
 	const [inputActive, setInputActive] = useState(false)
 	const debouncedSearch = useDebounce(search)
@@ -89,5 +89,3 @@ const SearchBar: React.FC = (): JSX.Element => {
 		</StyledForm>
 	)
 }
-
-export default SearchBar

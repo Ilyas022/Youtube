@@ -2,7 +2,7 @@ import { Icon } from 'components/Icon'
 
 import { StyledLogo } from './styled'
 
-const Logo: React.FC = (): JSX.Element => {
+export const Logo: React.FC = (): JSX.Element => {
 	return (
 		<StyledLogo>
 			<Icon name="youtube" />
@@ -10,5 +10,3 @@ const Logo: React.FC = (): JSX.Element => {
 		</StyledLogo>
 	)
 }
-
-export default Logo
