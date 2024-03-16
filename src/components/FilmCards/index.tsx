@@ -53,18 +53,20 @@ const FilmCards: React.FC = (): JSX.Element => {
 		<>
 			<StyledFilmCardsContainer data-testid="films container">
 				{isDataExist &&
-					data.items.map((video) => {
-						return (
-							<FilmCard
-								key={video.id.videoId}
-								title={video.snippet.title}
-								author={video.snippet.channelTitle}
-								year={video.snippet.publishedAt.substr(0, 4)}
-								image={video.snippet.thumbnails.medium.url}
-								onClick={(e) => handleOpenPopUpClick(e, video.id.videoId)}
-							/>
-						)
-					})}
+					data.items.map(
+						({ snippet: { publishedAt, channelTitle, title, thumbnails }, id: { videoId } }) => {
+							return (
+								<FilmCard
+									key={videoId}
+									title={title}
+									author={channelTitle}
+									year={publishedAt.substr(0, 4)}
+									image={thumbnails.medium.url}
+									onClick={(e) => handleOpenPopUpClick(e, videoId)}
+								/>
+							)
+						}
+					)}
 			</StyledFilmCardsContainer>
 			{isDataExist && (
 				<StyledBtnContainer>

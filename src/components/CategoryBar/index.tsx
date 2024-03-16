@@ -18,15 +18,10 @@ const CategoryBar: React.FC = (): JSX.Element => {
 	return (
 		<StyledCategoryBar>
 			<StyledBtnContainer>
-				{videoCategoryMockValues.map((category) => {
+				{videoCategoryMockValues.map(({ id, title }) => {
 					return (
-						<StyledBtn
-							key={category.id}
-							$isActive={btnCategory === category.id}
-							value={category.id}
-							onClick={handleClick}
-						>
-							{category.title}
+						<StyledBtn key={id} $isActive={btnCategory === id} value={id} onClick={handleClick}>
+							{title}
 						</StyledBtn>
 					)
 				})}
