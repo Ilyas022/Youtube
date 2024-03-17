@@ -3,6 +3,7 @@ import { useState } from 'react'
 import { dark, light } from 'constants/theme'
 import { useActions } from 'hooks/useActions'
 import { useTypedSelector } from 'hooks/useTypedSelector'
+import { selectTheme } from 'store/selectors'
 
 import {
 	StyledThemneToggler,
@@ -13,7 +14,7 @@ import {
 
 export const ThemeToggler = () => {
 	const { setTheme } = useActions()
-	const { name: themeName } = useTypedSelector((state) => state.theme.theme)
+	const { name: themeName } = useTypedSelector(selectTheme)
 
 	const [isToggled, setIsToggled] = useState<boolean>(() => (themeName === 'dark' ? true : false))
 	const onToggle = () => {

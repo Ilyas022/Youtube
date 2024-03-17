@@ -6,6 +6,7 @@ import { PopUp } from 'components/PopUp'
 import { FilmCardSkeleton } from 'components/skeletons'
 import { useTypedSelector } from 'hooks/useTypedSelector'
 import { useGetVideosQuery } from 'store/api/api'
+import { selectFilters } from 'store/selectors'
 
 import { config } from './config'
 import { StyledBtnContainer, StyledFilmCardsContainer, StyledWrongText } from './styled'
@@ -15,7 +16,7 @@ const loader = Array(16)
 	.map((_, i) => <FilmCardSkeleton key={i} />)
 
 export const FilmCards = () => {
-	const { title, category } = useTypedSelector((state) => state.filters)
+	const { title, category } = useTypedSelector(selectFilters)
 
 	const [isPopUpOpened, setPopUp] = useState(false)
 	const [popUpVideoId, setPopUpVideoId] = useState('')

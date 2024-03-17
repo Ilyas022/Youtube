@@ -8,8 +8,10 @@ import App from 'src/App'
 import { GlobalStyles } from 'src/global.styles'
 import { store } from 'store/store'
 
+import { selectTheme } from './store/selectors'
+
 const RootComponent = () => {
-	const { theme } = useTypedSelector((state) => state.theme)
+	const theme = useTypedSelector(selectTheme)
 
 	return (
 		<ThemeProvider theme={theme}>
