@@ -11,13 +11,18 @@ import { StyledBottomWrapper, StyledHeader, StyledTopWrapper } from './styled'
 
 export const Header = () => {
 	const [isMenuOpened, setMenuOpened] = useState(false)
+
+	const handleOpen = () => {
+		setMenuOpened((prev) => !prev)
+	}
+
 	return (
 		<StyledHeader>
 			<StyledTopWrapper>
 				<Logo />
 				<SearchBar />
 				<ThemeToggler />
-				<BurgerButton isOpened={isMenuOpened} setOpened={() => setMenuOpened((prev) => !prev)} />
+				<BurgerButton isOpened={isMenuOpened} setOpened={handleOpen} />
 			</StyledTopWrapper>
 			<StyledBottomWrapper>
 				<CategoryBar />

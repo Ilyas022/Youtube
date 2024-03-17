@@ -6,11 +6,15 @@ interface IBurgerButton {
 }
 
 export const BurgerButton = ({ isOpened, setOpened }: IBurgerButton) => {
+	const handleClick = () => {
+		setOpened()
+	}
+
 	return (
 		<StyledBurgerBtn>
 			<StyledBurgerInput
 				id="menuBurger"
-				onChange={() => setOpened()}
+				onChange={handleClick}
 				checked={isOpened}
 			></StyledBurgerInput>
 			<StyledBurgerLabel htmlFor="menuBurger"></StyledBurgerLabel>

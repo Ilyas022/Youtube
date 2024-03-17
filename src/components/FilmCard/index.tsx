@@ -16,7 +16,6 @@ interface IFilmCard {
 	year: string
 	title: string
 	image?: string
-
 	onClick: (e: React.MouseEvent<HTMLButtonElement>) => void
 }
 

@@ -39,6 +39,7 @@ export const SearchBar = () => {
 
 	const isLoading = false
 	const isShowHints = hints && inputActive
+
 	const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
 		setSearch(e.target.value)
 	}
@@ -51,6 +52,18 @@ export const SearchBar = () => {
 		setQuery(search)
 	}
 
+	const handleHintClick = (value: string) => {
+		setSearch(value)
+		setQuery(value)
+		ref.current?.blur()
+		setInputActive(false)
+	}
+
+	const handleInputFocus = () => setInputActive(true)
+	const handleInputSubmit = () => {
+		handleSubmit()
+	}
+
 	return (
 		<StyledForm onSubmit={handleSubmit}>
 			<StyledSearchContainer>
@@ -59,26 +72,15 @@ export const SearchBar = () => {
 					placeholder="Search"
 					value={search}
 					onChange={handleChange}
-					onSubmit={() => {
-						handleSubmit()
-					}}
-					onFocus={() => setInputActive(true)}
+					onSubmit={handleInputSubmit}
+					onFocus={handleInputFocus}
 				/>
 				<ErrorBoundary
 					fallback={<StyledWrongText>Something went wrong with search hints</StyledWrongText>}
 				>
 					{isShowHints && (
 						<StyledSearchHints>
-							<SearchHints
-								isLoading={isLoading}
-								hints={hints}
-								onClick={(value) => {
-									setSearch(value)
-									setQuery(value)
-									ref.current?.blur()
-									setInputActive(false)
-								}}
-							/>
+							<SearchHints isLoading={isLoading} hints={hints} onClick={handleHintClick} />
 						</StyledSearchHints>
 					)}
 				</ErrorBoundary>

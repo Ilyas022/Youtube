@@ -6,5 +6,9 @@ interface IButton {
 }
 
 export const Button = ({ onClick, text }: IButton) => {
-	return <StyledBtn onClick={() => onClick()}>{text}</StyledBtn>
+	const handleClick = () => {
+		onClick()
+	}
+
+	return <StyledBtn onClick={handleClick}>{text}</StyledBtn>
 }

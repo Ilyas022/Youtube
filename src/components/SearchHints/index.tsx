@@ -8,6 +8,7 @@ interface ISearchHints {
 
 export const SearchHints = (props: ISearchHints) => {
 	const { isLoading, onClick, hints } = props
+
 	return (
 		<StyledSearchHints>
 			{isLoading ? (
