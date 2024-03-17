@@ -1,15 +1,15 @@
 import styled from 'styled-components'
 
 import { device } from 'constants/breakpoints'
+import { ThemeFonts } from 'src/constants/fonts'
+import { fonts } from 'src/styles/mixins'
 
 export const StyledBtn = styled.button`
 	padding: 14px 35px;
 	background: #ff8a00;
 	border-radius: 10px;
 	color: white;
-	font-size: 22px;
-	font-weight: 700;
-	line-height: 26px;
+	${fonts(ThemeFonts.big)}
 	cursor: pointer;
 	transition: 0.3s ease 0s;
 

@@ -1,7 +1,8 @@
 import styled from 'styled-components'
 
 import { device } from 'constants/breakpoints'
-import { flex } from 'src/styles/mixins'
+import { ThemeFonts } from 'src/constants/fonts'
+import { flex, fonts } from 'src/styles/mixins'
 
 export const StyledFooter = styled.footer`
 	padding-bottom: 20px;
@@ -54,14 +55,11 @@ export const StyledFooterTopics = styled.div`
 
 export const StyledFooterTopic = styled.p`
 	color: ${({ theme }) => theme.colors.text};
-	font-size: 20px;
-	font-weight: 500;
-	line-height: 23px;
+	${fonts(ThemeFonts.medium)}
 
 	@media ${device.md} {
 		flex-basis: 43%;
-		font-size: 16px;
-		line-height: 120%;
+		${fonts(ThemeFonts.small)}
 	}
 
 	@media ${device.md} {
@@ -72,13 +70,10 @@ export const StyledFooterTopic = styled.p`
 export const StyledFooterAffiliation = styled.p`
 	color: ${({ theme }) => theme.colors.textLight};
 	text-align: center;
-	font-size: 24px;
-	font-weight: 500;
-	line-height: 28px;
+	${fonts(ThemeFonts.large)}
 
 	@media ${device.md} {
-		font-size: 22px;
-		line-height: 120%;
+		${fonts({ fontSize: '22px', lineHeight: '120%' })}
 	}
 
 	@media ${device.sm} {

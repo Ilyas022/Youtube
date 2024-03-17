@@ -1,7 +1,8 @@
 import styled, { css } from 'styled-components'
 
 import { device } from 'constants/breakpoints'
-import { flex } from 'src/styles/mixins'
+import { ThemeFonts } from 'src/constants/fonts'
+import { flex, fonts } from 'src/styles/mixins'
 
 export const StyledPhoneMenu = styled.div<{ $open?: boolean }>`
 	position: absolute;
@@ -31,8 +32,7 @@ export const StyledPhoneMenu = styled.div<{ $open?: boolean }>`
 	> p {
 		text-align: center;
 		color: white;
-		font-size: 16px;
-		line-height: 120%;
+		${fonts(ThemeFonts.small)}
 	}
 	> *:not(:last-child) {
 		margin-bottom: 10px;

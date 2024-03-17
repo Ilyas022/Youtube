@@ -14,3 +14,17 @@ export const flex = ({
 	${flexDirection && `flex-direction: ${flexDirection};`}
 	${justifyContent && `justify-content: ${justifyContent};`}
 `
+
+export const fonts = ({
+	fontSize,
+	lineHeight,
+	fontWeight,
+}: {
+	fontSize?: string
+	lineHeight?: string
+	fontWeight?: string
+}) => css`
+	${fontSize && `font-size: ${fontSize};`}
+	${lineHeight && `line-height: ${lineHeight};`}
+	${fontWeight && `font-weight: ${fontWeight};`}
+`
