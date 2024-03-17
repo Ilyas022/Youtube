@@ -39,8 +39,6 @@ export const StyledToggleSpan = styled.span`
 	&::before {
 		position: absolute;
 		content: '';
-		/* left: 2px;
-		top: 2px; */
 		width: 25px;
 		height: 25px;
 		background-color: #333;

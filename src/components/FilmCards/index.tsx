@@ -70,13 +70,6 @@ export const FilmCards = () => {
 					<Button onClick={handleShowMore} text="Show More" />
 				</StyledBtnContainer>
 			)}
-			{/* <StyledFilmCardsContainer>
-				<FilmCardSkeleton />
-				<FilmCardSkeleton />
-				<FilmCardSkeleton />
-				<FilmCardSkeleton />
-				<FilmCardSkeleton />
-			</StyledFilmCardsContainer> */}
 			{isPopUpOpened && (
 				<PopUp data-testid="popup" link={popUpVideoId} setOpened={() => setPopUp(false)} />
 			)}
