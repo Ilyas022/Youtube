@@ -34,7 +34,7 @@ export const StyledBottomWrapper = styled.div`
 export const StyledTopWrapper = styled.div`
 	${flex({ justifyContent: 'space-between', alignItems: 'center' })}
 
-	@media (min-width: 1330px) {
+	@media ${device.semiXl} {
 		justify-content: stretch;
 		> :nth-child(1) {
 			margin-right: 243px;

@@ -13,7 +13,7 @@ export const StyledFooterLinks = styled.div`
 	margin-bottom: 44px;
 	padding: 0 11px 0 36px;
 
-	@media (max-width: 800px) {
+	@media ${device.semiMd} {
 		flex-direction: column;
 		justify-content: space-between;
 		gap: 30px;
@@ -89,7 +89,7 @@ export const StyledIconContainer = styled.div`
 	display: flex;
 	gap: 26px;
 
-	@media (max-width: 800px) {
+	@media ${device.semiMd} {
 		justify-content: center;
 	}
 
