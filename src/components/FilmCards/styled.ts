@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 import { device } from 'constants/breakpoints'
+import { flex } from 'src/styles/mixins'
 
 export const StyledFilmCardsContainer = styled.div`
 	display: grid;
@@ -26,8 +27,7 @@ export const StyledFilmCardsContainer = styled.div`
 `
 
 export const StyledBtnContainer = styled.div`
-	display: flex;
-	justify-content: center;
+	${flex({ justifyContent: 'center' })}
 `
 
 export const StyledWrongText = styled.p`

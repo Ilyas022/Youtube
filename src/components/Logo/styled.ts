@@ -1,10 +1,10 @@
 import styled from 'styled-components'
 
 import { device } from 'constants/breakpoints'
+import { flex } from 'src/styles/mixins'
 
 export const StyledLogo = styled.a`
-	display: flex;
-	align-items: center;
+	${flex({ alignItems: 'center' })}
 	gap: 6px;
 	font-size: 18px;
 	font-weight: 700;

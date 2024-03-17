@@ -1,6 +1,7 @@
 import styled, { css } from 'styled-components'
 
 import { device } from 'constants/breakpoints'
+import { flex } from 'src/styles/mixins'
 
 export const StyledPhoneMenu = styled.div<{ $open?: boolean }>`
 	position: absolute;
@@ -17,8 +18,7 @@ export const StyledPhoneMenu = styled.div<{ $open?: boolean }>`
 	transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
 
 	@media ${device.sm} {
-		display: flex;
-		flex-direction: column;
+		${flex({ flexDirection: 'column' })}
 		padding: 30% 10%;
 	}
 

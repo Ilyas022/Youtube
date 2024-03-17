@@ -1,5 +1,7 @@
 import styled, { keyframes } from 'styled-components'
 
+import { flex } from 'src/styles/mixins'
+
 export const pulse = keyframes`
 	0%, 100% {
 		opacity: 1;
@@ -33,8 +35,7 @@ export const StyledDirectorInfo = styled.div`
 `
 
 export const StyledFilmData = styled.div`
-	display: flex;
-	align-items: center;
+	${flex({ alignItems: 'center' })}
 	gap: 5px;
 
 	> div {

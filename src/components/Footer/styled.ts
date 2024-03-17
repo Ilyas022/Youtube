@@ -1,14 +1,14 @@
 import styled from 'styled-components'
 
 import { device } from 'constants/breakpoints'
+import { flex } from 'src/styles/mixins'
 
 export const StyledFooter = styled.footer`
 	padding-bottom: 20px;
 `
 
 export const StyledFooterLinks = styled.div`
-	display: flex;
-	justify-content: space-between;
+	${flex({ justifyContent: 'space-between' })}
 	margin-bottom: 44px;
 	padding: 0 11px 0 36px;
 

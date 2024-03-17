@@ -1,11 +1,12 @@
 import styled from 'styled-components'
 
+import { flex } from 'src/styles/mixins'
+
 export const StyledSearchHints = styled.div`
-	display: flex;
+	${flex({ flexDirection: 'column' })}
 	max-height: 300px;
 	overflow: auto;
 	background: white;
-	flex-direction: column;
 	border: 1px solid black;
 `
 

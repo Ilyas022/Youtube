@@ -5,7 +5,7 @@ import { ThemeProvider } from 'styled-components'
 
 import { useTypedSelector } from 'hooks/useTypedSelector'
 import App from 'src/App'
-import { GlobalStyles } from 'src/global.styles'
+import { GlobalStyles } from 'src/styles/global.styles'
 import { store } from 'store/store'
 
 import { selectTheme } from './store/selectors'
