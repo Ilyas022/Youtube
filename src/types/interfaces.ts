@@ -48,6 +48,13 @@ export interface ISuggestionResponse {
 
 // Theme
 export interface IThemeColors {
+	white: string
+	black: string
+	toggler: string
+	menu: string
+	icon: string
+	btn: string
+	btnHover: string
 	primary: string
 	secondary: string
 	background: string

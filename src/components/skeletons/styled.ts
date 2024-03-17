@@ -53,7 +53,7 @@ export const StyledSeparator = styled.span`
 	height: 3px;
 	margin: 5px 0;
 	border-radius: 50%;
-	background: #000;
+	background: ${({ theme }) => theme.colors.text};
 	animation: ${pulse} 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 `
 

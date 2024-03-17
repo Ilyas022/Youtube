@@ -6,8 +6,8 @@ export const StyledSearchHints = styled.div`
 	${flex({ flexDirection: 'column' })}
 	max-height: 300px;
 	overflow: auto;
-	background: white;
-	border: 1px solid black;
+	background: ${({ theme }) => theme.colors.white};
+	border: 1px solid ${({ theme }) => theme.colors.black};
 `
 
 export const StyledHintsBtn = styled.button`
@@ -15,12 +15,12 @@ export const StyledHintsBtn = styled.button`
 	padding: 5px;
 	transition: background 0.3s ease 0s;
 	& + & {
-		border-top: 1px solid black;
+		border-top: 1px solid ${({ theme }) => theme.colors.black};
 	}
 
 	@media (hover: hover) {
 		&:hover {
-			background: gray;
+			background: ${({ theme }) => theme.colors.icon};
 		}
 	}
 `

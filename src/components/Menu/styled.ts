@@ -14,7 +14,7 @@ export const StyledPhoneMenu = styled.div<{ $open?: boolean }>`
 
 	width: 100%;
 	align-items: stretch;
-	background-color: #000000bf;
+	background-color: ${({ theme }) => theme.colors.menu};
 	transform: translateX(100%);
 	transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
 
@@ -31,7 +31,7 @@ export const StyledPhoneMenu = styled.div<{ $open?: boolean }>`
 
 	> p {
 		text-align: center;
-		color: white;
+		color: ${({ theme }) => theme.colors.white};
 		${fonts(ThemeFonts.small)}
 	}
 	> *:not(:last-child) {

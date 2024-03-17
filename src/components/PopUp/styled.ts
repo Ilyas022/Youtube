@@ -11,7 +11,7 @@ export const StyledPopUp = styled.div`
 	flex-direction: column;
 	width: 100%;
 	height: 100%;
-	background: #000000c4;
+	background: ${({ theme }) => theme.colors.menu};
 `
 
 export const StyledPopUpContainer = styled.div`

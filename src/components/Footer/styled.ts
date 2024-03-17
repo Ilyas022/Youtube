@@ -96,7 +96,7 @@ export const StyledIconContainer = styled.div`
 	> svg {
 		width: 16px;
 		height: 16px;
-		fill: #6d6e76;
+		fill: ${({ theme }) => theme.colors.icon};
 		transition: fill 0.3s ease 0s;
 	}
 

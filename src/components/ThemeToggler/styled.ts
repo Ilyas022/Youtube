@@ -19,17 +19,17 @@ export const StyledToggleInput = styled.input`
 
 	&:checked + span::before {
 		transform: translateX(25px);
-		background-color: #333;
+		background-color: ${({ theme }) => theme.colors.toggler};
 	}
 	&:checked + span {
-		background-color: #ff9f00;
+		background-color: ${({ theme }) => theme.colors.btn};
 	}
 `
 
 export const StyledToggleSpan = styled.span`
 	position: absolute;
 	cursor: pointer;
-	background-color: #b6b6b6;
+	background-color: ${({ theme }) => theme.colors.textLight};
 	border-radius: 25px;
 	top: 0;
 	right: 0;
@@ -41,7 +41,7 @@ export const StyledToggleSpan = styled.span`
 		content: '';
 		width: 25px;
 		height: 25px;
-		background-color: #333;
+		background-color: ${({ theme }) => theme.colors.toggler};
 		border-radius: 50%;
 		transition: transform 0.3s ease;
 	}
