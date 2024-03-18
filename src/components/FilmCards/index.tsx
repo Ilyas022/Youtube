@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useCallback, useMemo, useState } from 'react'
 
 import { Button } from 'components//Buttons/Button'
 import { FilmCard } from 'components/FilmCard'
@@ -25,45 +25,50 @@ export const FilmCards = () => {
 
 	const { data, isLoading } = useGetVideosQuery({ title, category, pageToken })
 
-	const handleOpenPopUpClick = (e: React.MouseEvent<HTMLButtonElement>, link: string) => {
-		e.preventDefault()
-		setPopUp(true)
-		setPopUpVideoId(link)
-	}
+	const handleOpenPopUpClick = useCallback(
+		(e: React.MouseEvent<HTMLButtonElement>, link: string) => {
+			e.preventDefault()
+			setPopUp(true)
+			setPopUpVideoId(link)
+		},
+		[]
+	)
 
-	const handleShowMore = () => {
+	const handleShowMore = useCallback(() => {
 		data && setPageToken(data.nextPageToken)
-	}
+	}, [data])
+
+	const handlePopUpClose = useCallback(() => {
+		setPopUp(false)
+	}, [])
 
 	const isNodata = !isLoading && !data?.items.length
 	const isDataExist = data?.items.length
 
-	if (isLoading) {
-		return <StyledFilmCardsContainer data-testid="loader">{loader}</StyledFilmCardsContainer>
-	}
-
-	if (isNodata) {
-		return <StyledWrongText data-testid="placeholder">{config.phText}</StyledWrongText>
-	}
+	const filmCards = useMemo(
+		() =>
+			isDataExist &&
+			data.items.map(
+				({ snippet: { publishedAt, channelTitle, title, thumbnails }, id: { videoId } }) => (
+					<FilmCard
+						key={videoId}
+						title={title}
+						author={channelTitle}
+						year={publishedAt.substr(0, 4)}
+						image={thumbnails.medium.url}
+						onClick={(e) => handleOpenPopUpClick(e, videoId)}
+					/>
+				)
+			),
+		[data, handleOpenPopUpClick, isDataExist]
+	)
 
 	return (
 		<>
 			<StyledFilmCardsContainer data-testid="films container">
-				{isDataExist &&
-					data.items.map(
-						({ snippet: { publishedAt, channelTitle, title, thumbnails }, id: { videoId } }) => {
-							return (
-								<FilmCard
-									key={videoId}
-									title={title}
-									author={channelTitle}
-									year={publishedAt.substr(0, 4)}
-									image={thumbnails.medium.url}
-									onClick={(e) => handleOpenPopUpClick(e, videoId)}
-								/>
-							)
-						}
-					)}
+				{isLoading && loader}
+				{isNodata && <StyledWrongText data-testid="placeholder">{config.phText}</StyledWrongText>}
+				{filmCards}
 			</StyledFilmCardsContainer>
 			{isDataExist && (
 				<StyledBtnContainer>
@@ -71,7 +76,7 @@ export const FilmCards = () => {
 				</StyledBtnContainer>
 			)}
 			{isPopUpOpened && (
-				<PopUp data-testid="popup" link={popUpVideoId} setOpened={() => setPopUp(false)} />
+				<PopUp data-testid="popup" link={popUpVideoId} setOpened={handlePopUpClose} />
 			)}
 		</>
 	)

@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import React, { memo, useRef, useState } from 'react'
 
 import { ErrorBoundary } from 'components/ErrorBoundary'
 import { StyledWrongText } from 'components/FilmCards/styled'
@@ -18,7 +18,7 @@ import {
 	StyledSearchInput,
 } from './styled'
 
-export const SearchBar = () => {
+export const SearchBar = memo(() => {
 	const [search, setSearch] = useState('')
 	const [inputActive, setInputActive] = useState(false)
 	const debouncedSearch = useDebounce(search)
@@ -90,4 +90,6 @@ export const SearchBar = () => {
 			</StyledSearchBtn>
 		</StyledForm>
 	)
-}
+})
+
+SearchBar.displayName = 'SearchBar'
