@@ -42,13 +42,17 @@ export const FilmCards = () => {
 		setPopUp(false)
 	}, [])
 
-	const isNodata = !isLoading && !data?.items.length
-	const isDataExist = data?.items.length
+	const films = useMemo(() => {
+		if (data?.items) return Object.values(data.items)
+	}, [data])
+
+	const isNodata = !isLoading && !films?.length
+	const isDataExist = !!films?.length
 
 	const filmCards = useMemo(
 		() =>
 			isDataExist &&
-			data.items.map(
+			films.map(
 				({ snippet: { publishedAt, channelTitle, title, thumbnails }, id: { videoId } }) => (
 					<FilmCard
 						key={videoId}
@@ -60,21 +64,24 @@ export const FilmCards = () => {
 					/>
 				)
 			),
-		[data, handleOpenPopUpClick, isDataExist]
+		[films, handleOpenPopUpClick, isDataExist]
 	)
 
 	return (
 		<>
 			<StyledFilmCardsContainer data-testid="films container">
 				{isLoading && loader}
-				{isNodata && <StyledWrongText data-testid="placeholder">{config.phText}</StyledWrongText>}
-				{filmCards}
+				{isDataExist && filmCards}
 			</StyledFilmCardsContainer>
+
+			{isNodata && <StyledWrongText data-testid="placeholder">{config.phText}</StyledWrongText>}
+
 			{isDataExist && (
 				<StyledBtnContainer>
 					<Button onClick={handleShowMore} text="Show More" />
 				</StyledBtnContainer>
 			)}
+
 			{isPopUpOpened && (
 				<PopUp data-testid="popup" link={popUpVideoId} setOpened={handlePopUpClose} />
 			)}

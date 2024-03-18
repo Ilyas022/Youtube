@@ -1,46 +1,57 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 
-import { IVideosRes } from 'types/interfaces'
+import { IVideo, IVideosRes, IVideosResNormalized, NormalizedVideoItems } from 'types/interfaces'
+
+function normalizeData(items: IVideo[]): NormalizedVideoItems {
+	const normalizedData: NormalizedVideoItems = {}
+	items.forEach((item) => {
+		const videoId = item.id.videoId
+		normalizedData[videoId] = item
+	})
+	return normalizedData
+}
 
 export const movieApi = createApi({
 	reducerPath: 'movies',
 	baseQuery: fetchBaseQuery({ baseUrl: '' }),
 	endpoints: (builder) => ({
-		getVideos: builder.query<IVideosRes, { title?: string; category?: string; pageToken?: string }>(
-			{
-				query: ({ category, title, pageToken }) => ({
-					url: process.env.API_URL as string,
-					params: {
-						key: process.env.API_KEY as string,
-						q: title || '',
-						part: 'snippet',
-						type: 'video',
-						videoEmbeddable: true,
-						maxResults: 16,
-						pageToken: pageToken || '',
-						videoDuration: 'medium',
-						videoCategoryId: category || '25',
-						regionCode: 'BY',
-					},
-				}),
-				serializeQueryArgs: ({ queryArgs: { category, title } }) => {
-					return `${category}-${title}`
+		getVideos: builder.query<
+			IVideosResNormalized,
+			{ title?: string; category?: string; pageToken?: string }
+		>({
+			query: ({ category, title = '', pageToken }) => ({
+				url: process.env.API_URL as string,
+				params: {
+					key: process.env.API_KEY as string,
+					q: title || '',
+					part: 'snippet',
+					type: 'video',
+					videoEmbeddable: true,
+					maxResults: 16,
+					pageToken: pageToken || '',
+					videoDuration: 'medium',
+					videoCategoryId: category || '25',
+					regionCode: 'BY',
 				},
-				merge: (currentCache, newItems) => {
-					if (currentCache.nextPageToken !== newItems.nextPageToken) {
-						newItems.items.forEach((newVideo) => {
-							if (!currentCache.items.find((video) => video.id.videoId === newVideo.id.videoId)) {
-								currentCache.items.push(newVideo)
-							}
-						})
-						currentCache.nextPageToken = newItems.nextPageToken
-					} else return newItems
-				},
-				forceRefetch({ currentArg, previousArg }) {
-					return currentArg?.pageToken !== previousArg?.pageToken
-				},
-			}
-		),
+			}),
+
+			transformResponse(response: IVideosRes): IVideosResNormalized {
+				const normalizedData = normalizeData(response.items)
+				return { ...response, items: normalizedData }
+			},
+			serializeQueryArgs: ({ queryArgs: { category, title } }) => {
+				return `${category ? category : '25'}-${title}`
+			},
+			merge: (currentCache, newItems) => {
+				if (currentCache.nextPageToken !== newItems.nextPageToken) {
+					currentCache.items = { ...currentCache.items, ...newItems.items }
+					currentCache.nextPageToken = newItems.nextPageToken
+				} else return newItems
+			},
+			forceRefetch({ currentArg, previousArg }) {
+				return currentArg?.pageToken !== previousArg?.pageToken
+			},
+		}),
 		getVideoSuggestions: builder.query<string[], unknown>({
 			query: (title) => ({
 				url: process.env.API_SUGGESTIONS_URL as string,

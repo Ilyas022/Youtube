@@ -6,6 +6,17 @@ export interface IVideosRes {
 	nextPageToken: string
 	prevPageToken: string
 }
+export interface IVideosResNormalized {
+	kind: string
+	etag: string
+	items: NormalizedVideoItems
+	nextPageToken: string
+	prevPageToken: string
+}
+
+export interface NormalizedVideoItems {
+	[videoId: string]: IVideo
+}
 export interface IVideo {
 	kind: string
 	etag: string
