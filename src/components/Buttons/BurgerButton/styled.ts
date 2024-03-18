@@ -20,7 +20,7 @@ export const StyledBurgerInput = styled.input.attrs({ type: 'checkbox' })`
 	&:checked + label::before {
 		top: 5px;
 		transform: rotate(45deg);
-		box-shadow: 0 6px 0 ${({ theme }) => theme.colors.black};
+		box-shadow: 0 6px 0 transparent;
 		transition:
 			box-shadow 0.15s,
 			top 0.3s,
