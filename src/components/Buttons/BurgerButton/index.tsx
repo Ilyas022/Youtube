@@ -5,20 +5,19 @@ interface IBurgerButton {
 	setOpened: () => void
 }
 
-const BurgerButton: React.FC<IBurgerButton> = ({
-	isOpened,
-	setOpened,
-}: IBurgerButton): JSX.Element => {
+export const BurgerButton = ({ isOpened, setOpened }: IBurgerButton) => {
+	const handleClick = () => {
+		setOpened()
+	}
+
 	return (
 		<StyledBurgerBtn>
 			<StyledBurgerInput
 				id="menuBurger"
-				onChange={() => setOpened()}
+				onChange={handleClick}
 				checked={isOpened}
 			></StyledBurgerInput>
 			<StyledBurgerLabel htmlFor="menuBurger"></StyledBurgerLabel>
 		</StyledBurgerBtn>
 	)
 }
-
-export default BurgerButton

@@ -2,7 +2,7 @@ import { fireEvent } from '@testing-library/react'
 
 import { renderWithProviders } from 'utils/testWrapper'
 
-import PopUp from '.'
+import { PopUp } from '.'
 
 describe('PopUp', () => {
 	it('should render', () => {

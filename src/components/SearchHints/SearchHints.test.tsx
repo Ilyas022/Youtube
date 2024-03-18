@@ -2,7 +2,7 @@ import { fireEvent } from '@testing-library/react'
 
 import { renderWithProviders } from 'utils/testWrapper'
 
-import SearchHints from '.'
+import { SearchHints } from '.'
 
 describe('SearchHints', () => {
 	it('should render', () => {

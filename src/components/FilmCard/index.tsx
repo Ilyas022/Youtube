@@ -1,5 +1,6 @@
-import YtIcon from 'components/icons/YtIcon'
+import { Icon } from 'components/Icon'
 
+import { config } from './config'
 import {
 	StyledDirectorImgContainer,
 	StyledDirectorInfo,
@@ -15,34 +16,21 @@ interface IFilmCard {
 	year: string
 	title: string
 	image?: string
-
 	onClick: (e: React.MouseEvent<HTMLButtonElement>) => void
 }
 
-const FilmCard: React.FC<IFilmCard> = ({
-	title,
-	author,
-	year,
-	image,
-	onClick,
-}: IFilmCard): JSX.Element => {
+export const FilmCard = (props: IFilmCard) => {
+	const { title, author, year, image, onClick } = props
+
 	return (
 		<StyledFilmCard onClick={onClick}>
 			<StyledImgContainer>
-				<img
-					src={
-						image
-							? image
-							: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/2560px-Placeholder_view_vector.svg.png'
-					}
-					alt="film preview"
-					loading="lazy"
-				/>
+				<img src={image ? image : config.imageAltUrl} alt={config.imageAltText} loading="lazy" />
 			</StyledImgContainer>
 
 			<StyledDirectorInfo>
 				<StyledDirectorImgContainer>
-					<YtIcon />
+					<Icon name="youtube" />
 				</StyledDirectorImgContainer>
 				<div>
 					<StyledFilmTitle>{title}</StyledFilmTitle>
@@ -56,5 +44,3 @@ const FilmCard: React.FC<IFilmCard> = ({
 		</StyledFilmCard>
 	)
 }
-
-export default FilmCard

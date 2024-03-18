@@ -1,6 +1,3 @@
-import 'styled-components'
-import { IThemeColors } from './interfaces'
-
 declare module '*.module.css' {
 	const classes: { readonly [key: string]: string }
 	export default classes
@@ -15,6 +12,9 @@ declare module '*.module.sass' {
 	const classes: { readonly [key: string]: string }
 	export default classes
 }
+
+declare module '*.woff'
+declare module '*.woff2'
 
 declare module '*.avif' {
 	const src: string
@@ -60,11 +60,4 @@ declare module '*.svg' {
 	const src: string
 
 	export default src
-}
-
-declare module 'styled-components' {
-	export interface DefaultTheme {
-		name: string
-		colors: IThemeColors
-	}
 }

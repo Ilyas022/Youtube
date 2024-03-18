@@ -8,12 +8,6 @@ module.exports = {
 	coverageDirectory: 'coverage',
 	testEnvironment: 'jest-environment-jsdom',
 	moduleDirectories: ['node_modules', 'src'],
-	// moduleNameMapper: {
-	// 	'@alias/(.*)': '<rootDir>/src/path/to/alias/$1',
-	// },
-
-	// verbose: true,
-	// setupFiles: ['<rootDir>/jest.setup.ts'],
 	setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
 	moduleNameMapper: {
 		'\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':

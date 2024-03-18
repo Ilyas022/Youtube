@@ -1,8 +1,10 @@
 const path = require('path')
+
+const Dotenv = require('dotenv-webpack')
+const ESLintPlugin = require('eslint-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const ESLintPlugin = require('eslint-webpack-plugin')
-const Dotenv = require('dotenv-webpack')
+const TerserPlugin = require('terser-webpack-plugin')
 
 module.exports = ({ env }) => ({
 	entry: path.resolve(__dirname, '..', './src/index.tsx'),
@@ -19,13 +21,17 @@ module.exports = ({ env }) => ({
 			types: path.resolve(__dirname, '../src/types'),
 		},
 	},
+	optimization: {
+		minimize: true,
+		minimizer: [new TerserPlugin()],
+	},
 	module: {
 		rules: [
 			{
 				test: /\.(png|svg|jpg|jpeg|gif|ico)$/i,
 				type: 'asset/resource',
 				generator: {
-					filename: './assets/img/[hash][ext]',
+					filename: './assets/img/[name][ext]',
 				},
 			},
 			{
@@ -96,6 +102,7 @@ module.exports = ({ env }) => ({
 	plugins: [
 		new HtmlWebpackPlugin({
 			template: path.resolve(__dirname, '..', './src/index.html'),
+			favicon: path.resolve(__dirname, '..', './src/assets/icons/favicon.svg'),
 		}),
 		new MiniCssExtractPlugin({
 			filename: env === 'dev' ? '[name].css' : '[name].[contenthash].css',

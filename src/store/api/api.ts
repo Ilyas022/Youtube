@@ -43,10 +43,10 @@ export const movieApi = createApi({
 		),
 		getVideoSuggestions: builder.query<string[], unknown>({
 			query: (title) => ({
-				url: 'https://auto-suggest-queries.p.rapidapi.com/suggestqueries',
+				url: process.env.API_SUGGESTIONS_URL as string,
 				headers: {
-					'X-RapidAPI-Key': 'e1dd6b753emsh8196d424c28970dp18f287jsn0826e8c1390e',
-					'X-RapidAPI-Host': 'auto-suggest-queries.p.rapidapi.com',
+					'X-RapidAPI-Key': process.env.API_SUGGESTIONS_KEY as string,
+					'X-RapidAPI-Host': process.env.API_SUGGESTIONS_HOST as string,
 				},
 				params: {
 					query: title || '',

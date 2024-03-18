@@ -1,12 +1,13 @@
 import styled from 'styled-components'
 
+import { flex } from 'src/styles/mixins'
+
 export const StyledSearchHints = styled.div`
-	display: flex;
+	${flex({ flexDirection: 'column' })}
 	max-height: 300px;
 	overflow: auto;
-	background: white;
-	flex-direction: column;
-	border: 1px solid black;
+	background: ${({ theme }) => theme.colors.white};
+	border: 1px solid ${({ theme }) => theme.colors.black};
 `
 
 export const StyledHintsBtn = styled.button`
@@ -14,12 +15,12 @@ export const StyledHintsBtn = styled.button`
 	padding: 5px;
 	transition: background 0.3s ease 0s;
 	& + & {
-		border-top: 1px solid black;
+		border-top: 1px solid ${({ theme }) => theme.colors.black};
 	}
 
 	@media (hover: hover) {
 		&:hover {
-			background: gray;
+			background: ${({ theme }) => theme.colors.icon};
 		}
 	}
 `

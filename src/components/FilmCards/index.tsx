@@ -1,16 +1,22 @@
 import React, { useState } from 'react'
 
-import FilmCard from 'components/FilmCard'
-import PopUp from 'components/PopUp'
-import FilmCardSkeleton from 'components/skeletons'
+import { Button } from 'components//Buttons/Button'
+import { FilmCard } from 'components/FilmCard'
+import { PopUp } from 'components/PopUp'
+import { FilmCardSkeleton } from 'components/skeletons'
 import { useTypedSelector } from 'hooks/useTypedSelector'
 import { useGetVideosQuery } from 'store/api/api'
+import { selectFilters } from 'store/selectors'
 
+import { config } from './config'
 import { StyledBtnContainer, StyledFilmCardsContainer, StyledWrongText } from './styled'
-import Button from '../Buttons/Button'
 
-const FilmCards: React.FC = (): JSX.Element => {
-	const { title, category } = useTypedSelector((state) => state.filters)
+const loader = Array(16)
+	.fill(undefined)
+	.map((_, i) => <FilmCardSkeleton key={i} />)
+
+export const FilmCards = () => {
+	const { title, category } = useTypedSelector(selectFilters)
 
 	const [isPopUpOpened, setPopUp] = useState(false)
 	const [popUpVideoId, setPopUpVideoId] = useState('')
@@ -29,60 +35,44 @@ const FilmCards: React.FC = (): JSX.Element => {
 		data && setPageToken(data.nextPageToken)
 	}
 
+	const isNodata = !isLoading && !data?.items.length
+	const isDataExist = data?.items.length
+
 	if (isLoading) {
-		return (
-			<StyledFilmCardsContainer data-testid="loader">
-				<FilmCardSkeleton />
-				<FilmCardSkeleton />
-				<FilmCardSkeleton />
-				<FilmCardSkeleton />
-				<FilmCardSkeleton />
-			</StyledFilmCardsContainer>
-		)
+		return <StyledFilmCardsContainer data-testid="loader">{loader}</StyledFilmCardsContainer>
 	}
 
-	if (!isLoading && !data?.items.length) {
-		return (
-			<StyledWrongText data-testid="placeholder">
-				There are no such videos or or the maximum number of api requests has been exceeded
-			</StyledWrongText>
-		)
+	if (isNodata) {
+		return <StyledWrongText data-testid="placeholder">{config.phText}</StyledWrongText>
 	}
 
 	return (
 		<>
 			<StyledFilmCardsContainer data-testid="films container">
-				{data?.items.length &&
-					data.items.map((video) => {
-						return (
-							<FilmCard
-								key={video.id.videoId}
-								title={video.snippet.title}
-								author={video.snippet.channelTitle}
-								year={video.snippet.publishedAt.substr(0, 4)}
-								image={video.snippet.thumbnails.medium.url}
-								onClick={(e) => handleOpenPopUpClick(e, video.id.videoId)}
-							/>
-						)
-					})}
+				{isDataExist &&
+					data.items.map(
+						({ snippet: { publishedAt, channelTitle, title, thumbnails }, id: { videoId } }) => {
+							return (
+								<FilmCard
+									key={videoId}
+									title={title}
+									author={channelTitle}
+									year={publishedAt.substr(0, 4)}
+									image={thumbnails.medium.url}
+									onClick={(e) => handleOpenPopUpClick(e, videoId)}
+								/>
+							)
+						}
+					)}
 			</StyledFilmCardsContainer>
-			{data && (
+			{isDataExist && (
 				<StyledBtnContainer>
 					<Button onClick={handleShowMore} text="Show More" />
 				</StyledBtnContainer>
 			)}
-			{/* <StyledFilmCardsContainer>
-				<FilmCardSkeleton />
-				<FilmCardSkeleton />
-				<FilmCardSkeleton />
-				<FilmCardSkeleton />
-				<FilmCardSkeleton />
-			</StyledFilmCardsContainer> */}
 			{isPopUpOpened && (
 				<PopUp data-testid="popup" link={popUpVideoId} setOpened={() => setPopUp(false)} />
 			)}
 		</>
 	)
 }
-
-export default FilmCards

@@ -1,18 +1,19 @@
 import styled from 'styled-components'
 
 import { device } from 'constants/breakpoints'
+import { ThemeFonts } from 'src/constants/fonts'
+import { flex, fonts } from 'src/styles/mixins'
 
 export const StyledFooter = styled.footer`
 	padding-bottom: 20px;
 `
 
 export const StyledFooterLinks = styled.div`
-	display: flex;
-	justify-content: space-between;
+	${flex({ justifyContent: 'space-between' })}
 	margin-bottom: 44px;
 	padding: 0 11px 0 36px;
 
-	@media (max-width: 800px) {
+	@media ${device.semiMd} {
 		flex-direction: column;
 		justify-content: space-between;
 		gap: 30px;
@@ -54,14 +55,11 @@ export const StyledFooterTopics = styled.div`
 
 export const StyledFooterTopic = styled.p`
 	color: ${({ theme }) => theme.colors.text};
-	font-size: 20px;
-	font-weight: 500;
-	line-height: 23px;
+	${fonts(ThemeFonts.medium)}
 
 	@media ${device.md} {
 		flex-basis: 43%;
-		font-size: 16px;
-		line-height: 120%;
+		${fonts(ThemeFonts.small)}
 	}
 
 	@media ${device.md} {
@@ -72,13 +70,10 @@ export const StyledFooterTopic = styled.p`
 export const StyledFooterAffiliation = styled.p`
 	color: ${({ theme }) => theme.colors.textLight};
 	text-align: center;
-	font-size: 24px;
-	font-weight: 500;
-	line-height: 28px;
+	${fonts(ThemeFonts.large)}
 
 	@media ${device.md} {
-		font-size: 22px;
-		line-height: 120%;
+		${fonts({ fontSize: '22px', lineHeight: '120%' })}
 	}
 
 	@media ${device.sm} {
@@ -94,14 +89,14 @@ export const StyledIconContainer = styled.div`
 	display: flex;
 	gap: 26px;
 
-	@media (max-width: 800px) {
+	@media ${device.semiMd} {
 		justify-content: center;
 	}
 
 	> svg {
 		width: 16px;
 		height: 16px;
-		fill: #6d6e76;
+		fill: ${({ theme }) => theme.colors.icon};
 		transition: fill 0.3s ease 0s;
 	}
 

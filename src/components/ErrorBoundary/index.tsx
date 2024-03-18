@@ -9,7 +9,7 @@ interface IState {
 	hasError: boolean
 }
 
-class ErrorBoundary extends Component<IProps, IState> {
+export class ErrorBoundary extends Component<IProps, IState> {
 	constructor(props: IProps) {
 		super(props)
 		this.state = { hasError: false }
@@ -33,5 +33,3 @@ class ErrorBoundary extends Component<IProps, IState> {
 		return this.props.children
 	}
 }
-
-export default ErrorBoundary

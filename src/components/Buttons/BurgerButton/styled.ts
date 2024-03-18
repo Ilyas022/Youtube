@@ -20,12 +20,12 @@ export const StyledBurgerInput = styled.input.attrs({ type: 'checkbox' })`
 	&:checked + label::before {
 		top: 5px;
 		transform: rotate(45deg);
-		box-shadow: 0 6px 0 rgba(0, 0, 0, 0);
+		box-shadow: 0 6px 0 ${({ theme }) => theme.colors.black};
 		transition:
 			box-shadow 0.15s,
 			top 0.3s,
 			transform 0.3s 0.15s;
-		background-color: #ff8a00;
+		background-color: ${({ theme }) => theme.colors.primary};
 	}
 	&:checked + label::after {
 		bottom: 5px;
@@ -33,7 +33,7 @@ export const StyledBurgerInput = styled.input.attrs({ type: 'checkbox' })`
 		transition:
 			bottom 0.3s,
 			transform 0.3s 0.15s;
-		background-color: #ff8a00;
+		background-color: ${({ theme }) => theme.colors.primary};
 	}
 `
 
@@ -57,11 +57,11 @@ export const StyledBurgerLabel = styled.label`
 		width: 100%;
 		height: 2px;
 		border-radius: 10px;
-		background: #000;
+		background-color: ${({ theme }) => theme.colors.primary};
 	}
 	&:before {
 		top: 0;
-		box-shadow: 0 5px 0 #000;
+		box-shadow: 0 5px 0 ${({ theme }) => theme.colors.primary};
 		transition:
 			box-shadow 0.3s 0.15s,
 			top 0.3s 0.15s,

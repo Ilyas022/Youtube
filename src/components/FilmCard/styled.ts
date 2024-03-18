@@ -1,10 +1,10 @@
 import styled from 'styled-components'
 
 import { device } from 'constants/breakpoints'
+import { flex } from 'src/styles/mixins'
 
 export const StyledFilmCard = styled.button`
-	display: flex;
-	flex-direction: column;
+	${flex({ flexDirection: 'column' })}
 	cursor: pointer;
 	background: transparent;
 	position: relative;
@@ -36,9 +36,7 @@ export const StyledImgContainer = styled.div`
 `
 
 export const StyledDirectorImgContainer = styled.div`
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	${flex({ alignItems: 'center', justifyContent: 'center' })}
 	width: 36px;
 	height: 36px;
 	border-radius: 50%;
@@ -66,8 +64,7 @@ export const StyledDirectorInfo = styled.div`
 `
 
 export const StyledFilmData = styled.div`
-	display: flex;
-	align-items: center;
+	${flex({ alignItems: 'center' })}
 	margin-top: 4px;
 	gap: 5px;
 	font-size: 14px;

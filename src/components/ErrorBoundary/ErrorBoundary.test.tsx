@@ -2,7 +2,7 @@ import { render, screen } from '@testing-library/react'
 
 import { renderWithProviders } from 'utils/testWrapper'
 
-import ErrorBoundary from './ErrorBoundary'
+import { ErrorBoundary } from '.'
 
 const ChildComponent = () => <div>Child Component</div>
 const FallbackComponent = () => <div>Fallback Component</div>

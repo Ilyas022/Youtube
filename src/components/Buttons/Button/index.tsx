@@ -5,8 +5,10 @@ interface IButton {
 	text: string
 }
 
-const Button: React.FC<IButton> = ({ onClick, text }: IButton): JSX.Element => {
-	return <StyledBtn onClick={() => onClick()}>{text}</StyledBtn>
-}
+export const Button = ({ onClick, text }: IButton) => {
+	const handleClick = () => {
+		onClick()
+	}
 
-export default Button
+	return <StyledBtn onClick={handleClick}>{text}</StyledBtn>
+}

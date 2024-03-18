@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 import { device } from 'constants/breakpoints'
+import { flex } from 'src/styles/mixins'
 
 export const StyledHeader = styled.header`
 	margin-bottom: 28px;
@@ -23,9 +24,7 @@ export const StyledHeader = styled.header`
 `
 
 export const StyledBottomWrapper = styled.div`
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	${flex({ justifyContent: 'center', alignItems: 'center' })}
 	padding: 12px 0;
 
 	@media ${device.xs} {
@@ -33,11 +32,9 @@ export const StyledBottomWrapper = styled.div`
 	}
 `
 export const StyledTopWrapper = styled.div`
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
+	${flex({ justifyContent: 'space-between', alignItems: 'center' })}
 
-	@media (min-width: 1330px) {
+	@media ${device.semiXl} {
 		justify-content: stretch;
 		> :nth-child(1) {
 			margin-right: 243px;

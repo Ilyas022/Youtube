@@ -1,14 +1,12 @@
-import YtIcon from 'components/icons/YtIcon'
+import { Icon } from 'components/Icon'
 
 import { StyledLogo } from './styled'
 
-const Logo: React.FC = (): JSX.Element => {
+export const Logo = () => {
 	return (
 		<StyledLogo>
-			<YtIcon />
+			<Icon name="youtube" />
 			<p data-testid="cypress-logo-text">ModsenFilms</p>
 		</StyledLogo>
 	)
 }
-
-export default Logo

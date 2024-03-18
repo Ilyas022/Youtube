@@ -9,7 +9,7 @@ interface IPopUp {
 	setOpened: () => void
 }
 
-const PopUp: React.FC<IPopUp> = ({ link, setOpened }: IPopUp): JSX.Element => {
+export const PopUp = ({ link, setOpened }: IPopUp) => {
 	const [lockScroll, unlockScroll] = useScrollLock()
 	const ref = useRef(null)
 
@@ -36,5 +36,3 @@ const PopUp: React.FC<IPopUp> = ({ link, setOpened }: IPopUp): JSX.Element => {
 		</StyledPopUp>
 	)
 }
-
-export default PopUp

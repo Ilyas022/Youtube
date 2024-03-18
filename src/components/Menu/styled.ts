@@ -1,6 +1,8 @@
 import styled, { css } from 'styled-components'
 
 import { device } from 'constants/breakpoints'
+import { ThemeFonts } from 'src/constants/fonts'
+import { flex, fonts } from 'src/styles/mixins'
 
 export const StyledPhoneMenu = styled.div<{ $open?: boolean }>`
 	position: absolute;
@@ -12,13 +14,12 @@ export const StyledPhoneMenu = styled.div<{ $open?: boolean }>`
 
 	width: 100%;
 	align-items: stretch;
-	background-color: #000000bf;
+	background-color: ${({ theme }) => theme.colors.menu};
 	transform: translateX(100%);
 	transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
 
 	@media ${device.sm} {
-		display: flex;
-		flex-direction: column;
+		${flex({ flexDirection: 'column' })}
 		padding: 30% 10%;
 	}
 
@@ -30,9 +31,8 @@ export const StyledPhoneMenu = styled.div<{ $open?: boolean }>`
 
 	> p {
 		text-align: center;
-		color: white;
-		font-size: 16px;
-		line-height: 120%;
+		color: ${({ theme }) => theme.colors.white};
+		${fonts(ThemeFonts.small)}
 	}
 	> *:not(:last-child) {
 		margin-bottom: 10px;

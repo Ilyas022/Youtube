@@ -24,14 +24,8 @@
     "react": {
       "version": "detect"
     },
-    // "import/resolver": {
-    //   "node": {
-    //     "paths": ["src"],
-    //     "extensions": [".js", ".jsx", ".ts", ".tsx"]
-    //   }
-    // }
     "import/resolver": {
-      "typescript": {} // Используйте по умолчанию, если используете tsconfig.json
+      "typescript": {}
     }
   },
   "root": true,

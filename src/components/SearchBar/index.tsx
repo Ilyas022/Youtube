@@ -1,9 +1,9 @@
 import React, { useRef, useState } from 'react'
 
-import ErrorBoundary from 'components/ErrorBoundary/ErrorBoundary'
+import { ErrorBoundary } from 'components/ErrorBoundary'
 import { StyledWrongText } from 'components/FilmCards/styled'
-import SearchIcon from 'components/icons/SearchIcon'
-import SearchHints from 'components/SearchHints'
+import { Icon } from 'components/Icon'
+import { SearchHints } from 'components/SearchHints'
 import { StyledHintsBtn } from 'components/SearchHints/styled'
 import { useActions } from 'hooks/useActions'
 import { useDebounce } from 'hooks/useDebounce'
@@ -18,7 +18,7 @@ import {
 	StyledSearchInput,
 } from './styled'
 
-const SearchBar: React.FC = (): JSX.Element => {
+export const SearchBar = () => {
 	const [search, setSearch] = useState('')
 	const [inputActive, setInputActive] = useState(false)
 	const debouncedSearch = useDebounce(search)
@@ -38,6 +38,7 @@ const SearchBar: React.FC = (): JSX.Element => {
 	const { data: hints } = useGetVideoSuggestionsQuery(debouncedSearch)
 
 	const isLoading = false
+	const isShowHints = hints && inputActive
 
 	const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
 		setSearch(e.target.value)
@@ -51,6 +52,18 @@ const SearchBar: React.FC = (): JSX.Element => {
 		setQuery(search)
 	}
 
+	const handleHintClick = (value: string) => {
+		setSearch(value)
+		setQuery(value)
+		ref.current?.blur()
+		setInputActive(false)
+	}
+
+	const handleInputFocus = () => setInputActive(true)
+	const handleInputSubmit = () => {
+		handleSubmit()
+	}
+
 	return (
 		<StyledForm onSubmit={handleSubmit}>
 			<StyledSearchContainer>
@@ -59,35 +72,22 @@ const SearchBar: React.FC = (): JSX.Element => {
 					placeholder="Search"
 					value={search}
 					onChange={handleChange}
-					onSubmit={() => {
-						handleSubmit()
-					}}
-					onFocus={() => setInputActive(true)}
+					onSubmit={handleInputSubmit}
+					onFocus={handleInputFocus}
 				/>
 				<ErrorBoundary
 					fallback={<StyledWrongText>Something went wrong with search hints</StyledWrongText>}
 				>
-					{hints && inputActive && (
+					{isShowHints && (
 						<StyledSearchHints>
-							<SearchHints
-								isLoading={isLoading}
-								hints={hints}
-								onClick={(value) => {
-									setSearch(value)
-									setQuery(value)
-									ref.current?.blur()
-									setInputActive(false)
-								}}
-							/>
+							<SearchHints isLoading={isLoading} hints={hints} onClick={handleHintClick} />
 						</StyledSearchHints>
 					)}
 				</ErrorBoundary>
 			</StyledSearchContainer>
 			<StyledSearchBtn data-testid="search submit button">
-				<SearchIcon />
+				<Icon name="search" />
 			</StyledSearchBtn>
 		</StyledForm>
 	)
 }
-
-export default SearchBar
