@@ -1,11 +1,20 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
 import { device } from 'constants/breakpoints'
 
-export const StyledThemneToggler = styled.div`
+export const StyledThemneToggler = styled.div<{ $isMenuOpened?: boolean }>`
 	@media ${device.sm} {
-		display: none;
-		visibility: hidden;
+		position: absolute;
+		top: 20px;
+		left: 100%;
+		z-index: 10;
+		transition: left 0.3s;
+
+		${(props) =>
+			props.$isMenuOpened &&
+			css`
+				left: 25px;
+			`}
 	}
 `
 export const StyledToggleLabel = styled.label`

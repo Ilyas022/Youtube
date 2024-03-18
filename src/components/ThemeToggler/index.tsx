@@ -12,7 +12,11 @@ import {
 	StyledToggleSpan,
 } from './styled'
 
-export const ThemeToggler = () => {
+interface IThemeToggler {
+	isMenuOpened: boolean
+}
+
+export const ThemeToggler = ({ isMenuOpened }: IThemeToggler) => {
 	const { setTheme } = useActions()
 	const { name: themeName } = useTypedSelector(selectTheme)
 
@@ -23,7 +27,7 @@ export const ThemeToggler = () => {
 	}
 
 	return (
-		<StyledThemneToggler>
+		<StyledThemneToggler $isMenuOpened={isMenuOpened}>
 			<StyledToggleLabel className="toggle-switch">
 				<StyledToggleInput
 					data-testid="toggler"

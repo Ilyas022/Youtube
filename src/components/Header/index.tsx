@@ -21,7 +21,7 @@ export const Header = () => {
 			<StyledTopWrapper>
 				<Logo />
 				<SearchBar />
-				<ThemeToggler />
+				<ThemeToggler isMenuOpened={isMenuOpened} />
 				<BurgerButton isOpened={isMenuOpened} setOpened={handleOpen} />
 			</StyledTopWrapper>
 			<StyledBottomWrapper>
