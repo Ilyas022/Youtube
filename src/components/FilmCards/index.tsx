@@ -1,7 +1,7 @@
 import React, { useCallback, useMemo, useState } from 'react'
 
-import { Button } from 'components//Buttons/Button'
 import { FilmCard } from 'components/FilmCard'
+import { Button } from 'components/FilmCards/Button'
 import { PopUp } from 'components/PopUp'
 import { FilmCardSkeleton } from 'components/skeletons'
 import { useTypedSelector } from 'hooks/useTypedSelector'
