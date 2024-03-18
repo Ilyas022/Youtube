@@ -9,12 +9,17 @@ interface ISearchHints {
 export const SearchHints = (props: ISearchHints) => {
 	const { isLoading, onClick, hints } = props
 
+	if (isLoading) {
+		return (
+			<StyledSearchHints>
+				<StyledHintsBtn>loading</StyledHintsBtn>
+			</StyledSearchHints>
+		)
+	}
+
 	return (
 		<StyledSearchHints>
-			{isLoading ? (
-				<StyledHintsBtn>loading</StyledHintsBtn>
-			) : (
-				hints.length &&
+			{hints.length ? (
 				hints.map((hint) => {
 					return (
 						<StyledHintsBtn
@@ -28,6 +33,8 @@ export const SearchHints = (props: ISearchHints) => {
 						</StyledHintsBtn>
 					)
 				})
+			) : (
+				<StyledHintsBtn>no such query</StyledHintsBtn>
 			)}
 		</StyledSearchHints>
 	)
