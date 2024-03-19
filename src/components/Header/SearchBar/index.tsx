@@ -1,10 +1,10 @@
-import React, { useRef, useState } from 'react'
+import React, { memo, useRef, useState } from 'react'
 
 import { ErrorBoundary } from 'components/ErrorBoundary'
 import { StyledWrongText } from 'components/FilmCards/styled'
+import { SearchHints } from 'components/Header/SearchBar/SearchHints'
+import { StyledHintsBtn } from 'components/Header/SearchBar/SearchHints/styled'
 import { Icon } from 'components/Icon'
-import { SearchHints } from 'components/SearchHints'
-import { StyledHintsBtn } from 'components/SearchHints/styled'
 import { useActions } from 'hooks/useActions'
 import { useDebounce } from 'hooks/useDebounce'
 import useOnClickOutside, { AnyEvent } from 'hooks/useOnClickOutside'
@@ -18,7 +18,7 @@ import {
 	StyledSearchInput,
 } from './styled'
 
-export const SearchBar = () => {
+export const SearchBar = memo(() => {
 	const [search, setSearch] = useState('')
 	const [inputActive, setInputActive] = useState(false)
 	const debouncedSearch = useDebounce(search)
@@ -90,4 +90,6 @@ export const SearchBar = () => {
 			</StyledSearchBtn>
 		</StyledForm>
 	)
-}
+})
+
+SearchBar.displayName = 'SearchBar'

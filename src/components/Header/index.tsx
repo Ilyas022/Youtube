@@ -1,11 +1,11 @@
 import { useState } from 'react'
 
-import { BurgerButton } from 'components/Buttons/BurgerButton'
-import { CategoryBar } from 'components/CategoryBar'
-import { Logo } from 'components/Logo'
-import { PhoneMenu } from 'components/Menu'
-import { SearchBar } from 'components/SearchBar'
-import { ThemeToggler } from 'components/ThemeToggler'
+import { BurgerButton } from 'components/Header/BurgerButton'
+import { CategoryBar } from 'components/Header/CategoryBar'
+import { Logo } from 'components/Header/Logo'
+import { PhoneMenu } from 'components/Header/PhoneMenu'
+import { SearchBar } from 'components/Header/SearchBar'
+import { ThemeToggler } from 'components/Header/ThemeToggler'
 
 import { StyledBottomWrapper, StyledHeader, StyledTopWrapper } from './styled'
 
@@ -21,7 +21,7 @@ export const Header = () => {
 			<StyledTopWrapper>
 				<Logo />
 				<SearchBar />
-				<ThemeToggler />
+				<ThemeToggler isMenuOpened={isMenuOpened} />
 				<BurgerButton isOpened={isMenuOpened} setOpened={handleOpen} />
 			</StyledTopWrapper>
 			<StyledBottomWrapper>

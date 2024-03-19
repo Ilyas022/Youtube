@@ -1,7 +1,7 @@
-import React, { useState } from 'react'
+import React, { useCallback, useMemo, useState } from 'react'
 
-import { Button } from 'components//Buttons/Button'
 import { FilmCard } from 'components/FilmCard'
+import { Button } from 'components/FilmCards/Button'
 import { PopUp } from 'components/PopUp'
 import { FilmCardSkeleton } from 'components/skeletons'
 import { useTypedSelector } from 'hooks/useTypedSelector'
@@ -25,53 +25,65 @@ export const FilmCards = () => {
 
 	const { data, isLoading } = useGetVideosQuery({ title, category, pageToken })
 
-	const handleOpenPopUpClick = (e: React.MouseEvent<HTMLButtonElement>, link: string) => {
-		e.preventDefault()
-		setPopUp(true)
-		setPopUpVideoId(link)
-	}
+	const handleOpenPopUpClick = useCallback(
+		(e: React.MouseEvent<HTMLButtonElement>, link: string) => {
+			e.preventDefault()
+			setPopUp(true)
+			setPopUpVideoId(link)
+		},
+		[]
+	)
 
-	const handleShowMore = () => {
+	const handleShowMore = useCallback(() => {
 		data && setPageToken(data.nextPageToken)
-	}
+	}, [data])
 
-	const isNodata = !isLoading && !data?.items.length
-	const isDataExist = data?.items.length
+	const handlePopUpClose = useCallback(() => {
+		setPopUp(false)
+	}, [])
 
-	if (isLoading) {
-		return <StyledFilmCardsContainer data-testid="loader">{loader}</StyledFilmCardsContainer>
-	}
+	const films = useMemo(() => {
+		if (data?.items) return Object.values(data.items)
+	}, [data])
 
-	if (isNodata) {
-		return <StyledWrongText data-testid="placeholder">{config.phText}</StyledWrongText>
-	}
+	const isNodata = !isLoading && !films?.length
+	const isDataExist = !!films?.length
+
+	const filmCards = useMemo(
+		() =>
+			isDataExist &&
+			films.map(
+				({ snippet: { publishedAt, channelTitle, title, thumbnails }, id: { videoId } }) => (
+					<FilmCard
+						key={videoId}
+						title={title}
+						author={channelTitle}
+						year={publishedAt.substr(0, 4)}
+						image={thumbnails.medium.url}
+						onClick={(e) => handleOpenPopUpClick(e, videoId)}
+					/>
+				)
+			),
+		[films, handleOpenPopUpClick, isDataExist]
+	)
 
 	return (
 		<>
 			<StyledFilmCardsContainer data-testid="films container">
-				{isDataExist &&
-					data.items.map(
-						({ snippet: { publishedAt, channelTitle, title, thumbnails }, id: { videoId } }) => {
-							return (
-								<FilmCard
-									key={videoId}
-									title={title}
-									author={channelTitle}
-									year={publishedAt.substr(0, 4)}
-									image={thumbnails.medium.url}
-									onClick={(e) => handleOpenPopUpClick(e, videoId)}
-								/>
-							)
-						}
-					)}
+				{isLoading && loader}
+				{isDataExist && filmCards}
 			</StyledFilmCardsContainer>
+
+			{isNodata && <StyledWrongText data-testid="placeholder">{config.phText}</StyledWrongText>}
+
 			{isDataExist && (
 				<StyledBtnContainer>
 					<Button onClick={handleShowMore} text="Show More" />
 				</StyledBtnContainer>
 			)}
+
 			{isPopUpOpened && (
-				<PopUp data-testid="popup" link={popUpVideoId} setOpened={() => setPopUp(false)} />
+				<PopUp data-testid="popup" link={popUpVideoId} setOpened={handlePopUpClose} />
 			)}
 		</>
 	)

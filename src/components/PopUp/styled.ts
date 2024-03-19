@@ -27,10 +27,7 @@ export const StyledPopUpContainer = styled.div`
 	}
 
 	@media ${device.sm} {
-		height: 50%;
-	}
-	@media ${device.xs} {
-		height: 40%;
+		width: 100%;
 	}
 `
 

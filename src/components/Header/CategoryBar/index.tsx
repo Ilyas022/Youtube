@@ -1,11 +1,11 @@
-import { useState } from 'react'
+import { memo, useState } from 'react'
 
 import { useActions } from 'hooks/useActions'
 import { videoCategoryMockValues } from 'utils/mockValues'
 
 import { StyledBtn, StyledBtnContainer, StyledCategoryBar } from './styled'
 
-export const CategoryBar = () => {
+export const CategoryBar = memo(() => {
 	const { setCategory } = useActions()
 	const [btnCategory, setBtnCategory] = useState(videoCategoryMockValues[0].id)
 
@@ -28,4 +28,6 @@ export const CategoryBar = () => {
 			</StyledBtnContainer>
 		</StyledCategoryBar>
 	)
-}
+})
+
+CategoryBar.displayName = 'CategoryBar'

@@ -23,6 +23,7 @@ export const StyledSearchInput = styled.input`
 	font-size: 14px;
 	font-weight: 400;
 	line-height: 16px;
+	color: ${({ theme }) => theme.colors.text};
 	background-color: transparent;
 	border: 1px solid ${({ theme }) => theme.colors.primary};
 
