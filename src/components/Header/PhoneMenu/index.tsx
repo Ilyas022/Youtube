@@ -20,7 +20,7 @@ export const PhoneMenu = ({ isOpened }: IPhoneMenu) => {
 	}, [lockScroll, unlockScroll, isOpened])
 
 	return (
-		<StyledPhoneMenu $open={isOpened}>
+		<StyledPhoneMenu $open={isOpened} data-testid="mobile menu">
 			<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint, nobis?</p>
 			<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint, nobis?</p>
 			<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint, nobis?</p>

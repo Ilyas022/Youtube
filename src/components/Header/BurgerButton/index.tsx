@@ -17,7 +17,7 @@ export const BurgerButton = ({ isOpened, setOpened }: IBurgerButton) => {
 				onChange={handleClick}
 				checked={isOpened}
 			></StyledBurgerInput>
-			<StyledBurgerLabel htmlFor="menuBurger"></StyledBurgerLabel>
+			<StyledBurgerLabel data-testid="burger btn" htmlFor="menuBurger"></StyledBurgerLabel>
 		</StyledBurgerBtn>
 	)
 }
