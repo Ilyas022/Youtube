@@ -1,8 +1,9 @@
 import { fireEvent, render } from '@testing-library/react'
-
-import FilmCard from './FilmCard'
 import { ThemeProvider } from 'styled-components'
-import { light } from '../../global.styles'
+
+import { light } from 'constants/theme'
+
+import { FilmCard } from '.'
 
 describe('FilmCard', () => {
 	const mockOnClick = jest.fn()

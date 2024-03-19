@@ -1,8 +1,10 @@
-import { renderWithProviders } from 'utils/testWrapper'
-import fetch from 'jest-fetch-mock'
-import FilmCards from './FilmCards'
 import { fireEvent, waitFor } from '@testing-library/react'
-import { IVideosRes } from 'utils/interfaces'
+import fetch from 'jest-fetch-mock'
+
+import { IVideosRes } from 'types/interfaces'
+import { renderWithProviders } from 'utils/testWrapper'
+
+import { FilmCards } from '.'
 
 const mockResponse: IVideosRes = {
 	kind: 'item',

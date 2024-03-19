@@ -10,16 +10,12 @@ describe('Search input', () => {
 	})
 
 	it('load initial suggestions', () => {
-		// cy.wait('@getInitSuggestQuery', { timeout: 0 })
-
 		cy.get('input[placeholder="Search"]').should('exist').focus()
 
 		cy.get('[data-testid="hint"').should('have.length', 2)
 	})
 
 	it('load initial videos', () => {
-		// cy.wait('@getVideosInitQuery', { timeout: 0 })
-
 		cy.get('[data-testid="films container"]  > *').should('have.length', 16)
 	})
 

@@ -1,20 +1,29 @@
 const path = require('path')
+
+const Dotenv = require('dotenv-webpack')
+const ESLintPlugin = require('eslint-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const ESLintPlugin = require('eslint-webpack-plugin')
-const Dotenv = require('dotenv-webpack')
+const TerserPlugin = require('terser-webpack-plugin')
 
 module.exports = ({ env }) => ({
 	entry: path.resolve(__dirname, '..', './src/index.tsx'),
 	resolve: {
 		extensions: ['.tsx', '.ts', '.js'],
 		alias: {
+			src: path.resolve(__dirname, '../src'),
 			components: path.resolve(__dirname, '../src/components'),
+			constants: path.resolve(__dirname, '../src/constants'),
 			hooks: path.resolve(__dirname, '../src/hooks'),
 			utils: path.resolve(__dirname, '../src/utils'),
 			assets: path.resolve(__dirname, '../src/assets'),
 			store: path.resolve(__dirname, '../src/store'),
+			types: path.resolve(__dirname, '../src/types'),
 		},
+	},
+	optimization: {
+		minimize: true,
+		minimizer: [new TerserPlugin()],
 	},
 	module: {
 		rules: [
@@ -22,7 +31,7 @@ module.exports = ({ env }) => ({
 				test: /\.(png|svg|jpg|jpeg|gif|ico)$/i,
 				type: 'asset/resource',
 				generator: {
-					filename: './assets/img/[hash][ext]',
+					filename: './assets/img/[name][ext]',
 				},
 			},
 			{
@@ -93,6 +102,7 @@ module.exports = ({ env }) => ({
 	plugins: [
 		new HtmlWebpackPlugin({
 			template: path.resolve(__dirname, '..', './src/index.html'),
+			favicon: path.resolve(__dirname, '..', './src/assets/icons/favicon.svg'),
 		}),
 		new MiniCssExtractPlugin({
 			filename: env === 'dev' ? '[name].css' : '[name].[contenthash].css',

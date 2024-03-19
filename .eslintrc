@@ -25,10 +25,7 @@
       "version": "detect"
     },
     "import/resolver": {
-      "node": {
-        "paths": ["src"],
-        "extensions": [".js", ".jsx", ".ts", ".tsx"]
-      }
+      "typescript": {}
     }
   },
   "root": true,
@@ -44,8 +41,16 @@
     "@typescript-eslint/no-var-requires": "off",
     "react/react-in-jsx-scope": "off",
     "import/no-named-as-default": "off",
-    // "@typescript-eslint/no-unused-vars": "warn"
     "@typescript-eslint/ban-ts-comment": "off",
-    "@typescript-eslint/ban-types": "off"
+    "@typescript-eslint/ban-types": "off",
+    "import/order": [
+      "error",
+      {
+        "groups": ["builtin", "external", "internal", ["parent", "sibling", "index"]],
+        "newlines-between": "always",
+        "alphabetize": { "order": "asc", "caseInsensitive": true }
+      }
+    ],
+    "import/newline-after-import": "error"
   }
 }
